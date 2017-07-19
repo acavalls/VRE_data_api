@@ -1,0 +1,17 @@
+# Start time: Mon Nov 14 07:27:27 UTC 2016
+/bin/sh: 1: prepare_ini_file.py: not found
+/bin/sh: 1: pydock3: not found
+/bin/sh: 1: run_ftdock.sh: not found
+/bin/sh: 1: pydock3: not found
+[WORKSPACE] Started
+[WORKSPACE] Finished
+[SETUP] Started
+Waiting for pid 16722
+Waiting for pid 16723
+[SETUP] Finished
+[SAMPLING] Started
+Waiting for pid 16724
+Waiting for pid 16725
+[SAMPLING] Finished
+ERROR: Sampling process, FTDock output file not found
+# End time: Mon Nov 14 07:27:27 UTC 2016

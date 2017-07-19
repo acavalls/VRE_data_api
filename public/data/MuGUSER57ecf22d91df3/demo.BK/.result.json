@@ -1,0 +1,25 @@
+{
+"outPaths": [
+        {"MuGUSER57ecf22d91df3/demo/top1.pdb": {
+                        "description": "Structure of the top 1 predicted model",
+                        "format": "PDB",
+                        "validate": 1,
+                        "tool": "pyDock",
+                        "tracktype": "PDB"
+        }}, 
+        {"MuGUSER57ecf22d91df3/demo/demo.tgz": {
+                        "description": "Tool results",
+                        "format": "TGZ",
+                        "validate": 1,
+                        "tool": "pyDock",
+                        "tracktype": "TGZ"
+        }}, 
+        {"MuGUSER57ecf22d91df3/demo/result.csv": {
+                        "description": "Summary table of predicted models",
+                        "format": "CSV",
+                        "validate": 1,
+                        "tool": "pyDock",
+                        "tracktype": "CSV"
+        }}
+        ]
+}

@@ -1,0 +1,135 @@
+<?php
+
+/*use App\Middleware\AuthMiddleware;
+use App\Middleware\GuestMiddleware;*/
+
+// 
+
+// Creating routes
+
+// documentation entry point and discovery info inside header
+$app->get('/', 'staticPages:home');
+//$app->get('/files/[{file_id}]', 'apiController:getFiles');
+
+
+// Versioning group
+
+
+$app->group('/v1', function() use ($container) {
+
+
+    // Files content
+    $this->group('/content', function() use ($container) {
+    	$this->get('/{file_id}[/]', 'apiController:get_content');
+    });
+
+    // Files meta
+    $this->group('/files', function() use ($container) {
+
+	// always return json	
+	//$this->add(new App\Middleware\JsonResponse());
+	$this->get('/[{file_id}[/]]', 'apiController:get_files');
+    });
+
+
+});
+
+
+/*
+// routes where the auth users can't access
+$app->group('', function() {
+
+	// HOME ROUTE
+	// 
+	$this->get('/', 'staticPages:home')->setName('home');
+
+	// SIGN UP ROUTE
+	// 
+	$this->get('/auth/signup', 'authController:getSignUp')->setName('auth.signup');
+	$this->post('/auth/signup', 'authController:postSignUp');
+
+	// FORGOT PASSWORD ROUTE
+	// 
+	$this->get('/auth/forgot-password', 'authController:getForgotPwd')->setName('auth.forgot');
+	$this->post('/auth/forgot-password', 'authController:postForgotPwd');
+
+	// RESET PASSWORD ROUTE
+	// 
+	$this->get('/auth/reset-password/{id:.*}', 'passwordController:getResetPwd')->setName('auth.reset');
+	$this->post('/auth/reset-password', 'passwordController:postResetPwd');
+
+	// SIGN IN ROUTE
+	// 
+	$this->get('/auth/signin', 'authController:getSignIn')->setName('auth.signin');
+	$this->post('/auth/signin', 'authController:postSignIn');
+
+})->add(new GuestMiddleware($container));
+
+// REMOVE USER COMPLETELY (FS + Mongo)
+//
+$app->get('/delete/user/{id}', 'wsController:deleteUser');
+
+
+// routes where the non auth users can't access
+$app->group('', function() {
+
+	// SIGN OUT ROUTE
+	// 
+	$this->get('/auth/signout', 'authController:getSignOut')->setName('auth.signout');
+
+	// LOCK SCREEN ROUTE
+	// 
+	$this->get('/auth/lock', 'authController:getLockScreen')->setName('auth.lock');
+
+	// CHANGE PASSWORD ROUTE
+	// 
+	$this->get('/auth/profile', 'passwordController:getChangeProfile')->setName('auth.profile');
+	$this->post('/auth/profile/user', 'passwordController:postChangeUser');
+	$this->post('/auth/profile/password', 'passwordController:postChangePassword');
+
+	// WORKSPACE
+	// 
+	$this->get('/workspace', 'staticPages:workspace')->setName('workspace');
+	
+	// GET TREE STRUCTURE
+	//
+	$this->get('/tree/{id}', 'wsController:getTree');
+
+	// GET DIR CONTENT
+	//
+	$this->get('/dir/{id}', 'wsController:getTable');
+
+	// DOWNLOAD FOLDER
+	//
+	$this->get('/download/folder/{id}', 'wsController:downloadFolder');
+
+	// DOWNLOAD FILE
+	//
+	$this->get('/download/file/{id}', 'wsController:downloadFile');
+
+	// DELETE FILE
+	//
+	$this->get('/delete/file/{id}', 'wsController:deleteFile');
+
+	// GET FILE PATH
+	//
+	$this->get('/get/path/{id}', 'wsController:getFilePath');
+	
+
+
+	// UPLOAD STEP 1 ROUTE
+	// 
+	$this->get('/upload/step1', 'uploadController:getStep1')->setName('upload.step1');
+	$this->post('/upload/step1/pdbligand', 'uploadController:postStep1PDBLigand');
+	$this->post('/upload/step1/ligand', 'uploadController:postStep1Ligand');
+
+
+	// UPLOAD STEP 2 ROUTE
+	// 
+	$this->get('/upload/step2/{id}', 'uploadController:getStep2')->setName('upload.step2');
+	$this->post('/upload/step2', 'uploadController:postStep2');
+
+
+
+})->add(new AuthMiddleware($container));*/
+
