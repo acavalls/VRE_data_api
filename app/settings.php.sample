@@ -13,21 +13,21 @@ return [
 			'level' => \Monolog\Logger::DEBUG,
 		],
 		'db' => [
-			'host'      => '10.32.7.200:27017',
-			'database'  => 'eucanshare_vre',
-			'authSource'=> 'eucanshare_vre',
-			'username'  => 'user01',
-			'password'  => 'eushvre01'
+			'host'      => '10.32.7.xxx:27017',
+			'database'  => 'whatever_vre',
+			'authSource'=> 'whatever_vre',
+			'username'  => 'user',
+			'password'  => '*****'
 		]
 	],
 
 	'globals' => [
-		'local_repository' => 'EuCanSHare_VRE',
-		'shortProjectName' => 'EUSH-vre',
+		'local_repository' => 'whatever_vre',
+		'shortProjectName' => 'vre',
 		'baseURL'          => '/VRE_data_api/public/',
 		'dataDir'          =>  __DIR__ . '/../../files/',
 		'api' => [
-			'tokenVerify_keycloak' => 'https://inb.bsc.es/auth/realms/eucanshare/protocol/openid-connect/userinfo',
+			'tokenVerify_keycloak' => 'https://inb.bsc.es/auth/realms/*******/protocol/openid-connect/userinfo',
 			'tokenVerify_google'   => 'https://www.googleapis.com/oauth2/v3/tokeninfo'
 		],
 		'http_codes' => [
