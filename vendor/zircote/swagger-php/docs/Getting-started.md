@@ -1,6 +1,6 @@
 # Getting started
 
-The goal of swagger-php is the generate a swagger.json using phpdoc annotations.
+The goal of swagger-php is to generate a swagger.json using phpdoc annotations.
 
 To output:
 
@@ -25,9 +25,9 @@ Write:
  */
 ```
 
-Note that Doctrine annotation supports arrays, but uses the `{` and `}` instead of `[` and `]`.
+Note that Doctrine annotation supports arrays, but uses `{` and `}` instead of `[` and `]`.
 
-And although doctrine also supports objects, but also uses `{` and `}` and requires the properties to be surrounded with `"`.
+And although doctrine also supports objects, but also uses `{` and `}` and requires the property names to be surrounded with `"`.
 
 **DON'T** write:
 
@@ -57,6 +57,7 @@ But use the annotation with the same name as the property, such as `@SWG\Info` f
 
 This adds validation, so when you misspell a property or forget a required property it will trigger a php warning.
 For example if you'd write `titel="My first ...` swagger-php whould generate a notice with "Unexpected field "titel" for @SWG\Info(), expecting "title", ..."
+
 
 ## Using variables in annotations
 
@@ -228,7 +229,66 @@ Which doesn't do anything by itself but now you can reference this piece by its 
 
 For more tips on refs, browse through the [using-refs example](https://github.com/zircote/swagger-php/tree/master/Examples/using-refs).
 
-## More information
+Alternatively, you can extend the definition altering specific fields using the `$` in-place of the `#`
+```php
+    /**
+     * @SWG\Property(
+     *   ref="$/definitions/product_id",
+     *   format="int32"
+     * )
+     */
+    public $id;
+``` 
+
+For extensions tips and examples, browse through [using-dynamic-refs example](https://github.com/zircote/swagger-php/tree/master/Examples/dynamic-reference).
+
+## Vendor extensions
+
+The specification allows for [custom properties](http://swagger.io/specification/#vendorExtensions) as long as they start with "x-" therefor all swagger-php annotations have an `x` property which will unfold into "x-" properties.
+
+```php
+/**
+ * @SWG\Info(
+ *   title="Example",
+ *   version=1,
+ *   x={
+ *     "some-name": "a-value",
+ *     "another": 2,
+ *     "complex-type": {
+ *       "supported":{
+ *         {"version": "1.0", "level": "baseapi"},
+ *         {"version": "2.1", "level": "fullapi"},
+ *       }
+ *     }
+ *   }
+ * )
+ */
+```
+
+Results in:
+
+```json
+"info": {
+  "title": "Example",
+  "version": 1,
+  "x-some-name": "a-value",
+  "x-another": 2,
+  "x-complex-type": {
+    "supported": [{
+      "version": "1.0",
+      "level": "baseapi"
+    }, {
+      "version": "2.1",
+      "level": "fullapi"
+    }]
+  }
+},
+```
+
+The [Amazon API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html) for example, makes use of these.
+
+
+## More information about Swagger
 
 To see which output maps to which annotation checkout [swagger-explained](http://bfanger.github.io/swagger-explained/)
 Which also contain snippets of the [swagger specification](http://swagger.io/specification/)

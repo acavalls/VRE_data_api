@@ -1,17 +1,19 @@
 <?php
 /**
- * Zend Framework (http://framework.zend.com/)
- *
- * @see       http://github.com/zendframework/zend-diactoros for the canonical source repository
- * @copyright Copyright (c) 2015-2016 Zend Technologies USA Inc. (http://www.zend.com)
+ * @see       https://github.com/zendframework/zend-diactoros for the canonical source repository
+ * @copyright Copyright (c) 2015-2017 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   https://github.com/zendframework/zend-diactoros/blob/master/LICENSE.md New BSD License
  */
+
+declare(strict_types=1);
 
 namespace Zend\Diactoros;
 
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UriInterface;
+
+use function strtolower;
 
 /**
  * HTTP Request encapsulation
@@ -29,9 +31,9 @@ class Request implements RequestInterface
      * @param null|string $method HTTP method for the request, if any.
      * @param string|resource|StreamInterface $body Message body, if any.
      * @param array $headers Headers for the message, if any.
-     * @throws \InvalidArgumentException for any invalid value.
+     * @throws Exception\InvalidArgumentException for any invalid value.
      */
-    public function __construct($uri = null, $method = null, $body = 'php://temp', array $headers = [])
+    public function __construct($uri = null, string $method = null, $body = 'php://temp', array $headers = [])
     {
         $this->initialize($uri, $method, $body, $headers);
     }
@@ -39,7 +41,7 @@ class Request implements RequestInterface
     /**
      * {@inheritdoc}
      */
-    public function getHeaders()
+    public function getHeaders() : array
     {
         $headers = $this->headers;
         if (! $this->hasHeader('host')
@@ -54,7 +56,7 @@ class Request implements RequestInterface
     /**
      * {@inheritdoc}
      */
-    public function getHeader($header)
+    public function getHeader($header) : array
     {
         if (! $this->hasHeader($header)) {
             if (strtolower($header) === 'host'

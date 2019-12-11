@@ -29,6 +29,16 @@ class StaticAnalyser
      */
     public function fromFile($filename)
     {
+        if (function_exists('opcache_get_status') && function_exists('opcache_get_configuration')) {
+            if (empty($GLOBALS['swagger_opcache_warning'])) {
+                $GLOBALS['swagger_opcache_warning'] = true;
+                $status = opcache_get_status();
+                $config = opcache_get_configuration();
+                if ($status['opcache_enabled'] && $config['directives']['opcache.save_comments'] == false) {
+                    Logger::warning("php.ini \"opcache.save_comments = 0\" interferes with extracting annotations.\n[LINK] http://php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments");
+                }
+            }
+        }
         $tokens = token_get_all(file_get_contents($filename));
         return $this->fromTokens($tokens, new Context(['filename' => $filename]));
     }
@@ -91,8 +101,8 @@ class StaticAnalyser
                 }
                 $token = $this->nextToken($tokens, $parseContext);
 
-                if (is_string($token) && $token === '{') {
-                    // php7 anonymous classes (i.e. new class { public function foo() {} };)
+                if (is_string($token) && ($token === '(' || $token === '{')) {
+                    // php7 anonymous classes (i.e. new class() { public function foo() {} };)
                     continue;
                 }
 
@@ -263,20 +273,22 @@ class StaticAnalyser
      */
     private function nextToken(&$tokens, $context)
     {
-        $token = next($tokens);
-        if ($token[0] === T_WHITESPACE) {
-            return $this->nextToken($tokens, $context);
-        }
-        if ($token[0] === T_COMMENT) {
-            $pos = strpos($token[1], '@SWG\\');
-            if ($pos) {
-                $line = $context->line ? $context->line + $token[2] : $token[2];
-                $commentContext = new Context(['line' => $line], $context);
-                Logger::notice('Annotations are only parsed inside `/**` DocBlocks, skipping ' . $commentContext);
+        while (true) {
+            $token = next($tokens);
+            if ($token[0] === T_WHITESPACE) {
+                continue;
             }
-            return $this->nextToken($tokens, $context);
+            if ($token[0] === T_COMMENT) {
+                $pos = strpos($token[1], '@SWG\\');
+                if ($pos) {
+                    $line = $context->line ? $context->line + $token[2] : $token[2];
+                    $commentContext = new Context(['line' => $line], $context);
+                    Logger::notice('Annotations are only parsed inside `/**` DocBlocks, skipping ' . $commentContext);
+                }
+                continue;
+            }
+            return $token;
         }
-        return $token;
     }
 
     private function parseNamespace(&$tokens, &$token, $parseContext)

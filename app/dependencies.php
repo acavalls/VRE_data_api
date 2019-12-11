@@ -2,9 +2,12 @@
 
 //use Respect\Validation\Validator as v;
 
-// Get the container
-$container = $app->getContainer();
+#require_once (__DIR__ . '/controllers/StaticPagesController.php');
+#require_once (__DIR__ . '/controllers/ApiController.php');
 
+// Get the container
+
+$container = $app->getContainer();
 
 // monolog
 $container['logger'] = function ($c) {
@@ -20,44 +23,35 @@ $container['db'] = function ($c) {
 
 	$db = $c->get('settings')['db'];
 	
-	$mng = new \MongoDB\Driver\Manager("mongodb://".$db['username'].":".$db['password']."@".$db['host']);
-	
-	return new \App\Models\DB($mng, $db['database']);
+	$mng = new \MongoDB\Driver\Manager("mongodb://".$db['username'].":".$db['password']."@".$db['host']."/".$db['database'].'?authSource='.$db['authSource']);
 
+	return new \App\Models\DB($mng, $db['database']);
 };
 
 
 // CONTROLLERS
 $container['staticPages'] = function($c) {
-
 	return new \App\Controllers\StaticPagesController($c);
-
 };
 
 $container['apiController'] = function($c) {
-
 	return new \App\Controllers\ApiController($c);
-
 };
 
 
 //GLOBALS
 $container['global'] = function($c) {
-	
 	return $c->get('globals');
-
 };
 
 
 //HANDLERS
-
 $container['errorHandler'] = function ($c) {
     return new \App\Handlers\Error($c['logger']);
 };
 
 
 //MODELS 
-
 $container['utils'] = function($c) {
 
 	return new \App\Models\Utilities($c);

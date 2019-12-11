@@ -2,6 +2,7 @@
 
 return [
 
+	'debug' => true,
 	'settings' => [
 		'displayErrorDetails' => true,
 		'determineRouteBeforeAppMiddleware' => true,
@@ -12,20 +13,21 @@ return [
 			'level' => \Monolog\Logger::DEBUG,
 		],
 		'db' => [
-			'host'     => 'mmb.pcb.ub.es',
-			'database' => 'MuGVRE_bsc',
-			'username' => 'newDataLoader',
-			'password' => 'mdbwany2015'
+			'host'      => '10.32.7.200:27017',
+			'database'  => 'eucanshare_vre',
+			'authSource'=> 'eucanshare_vre',
+			'username'  => 'user01',
+			'password'  => 'eushvre01'
 		]
 	],
 
 	'globals' => [
-		'local_repository' => 'VRE_BSC',
-		'shortProjectName' => 'MUG',
-		'baseURL'          => '/VREapi/public/',
+		'local_repository' => 'EuCanSHare_VRE',
+		'shortProjectName' => 'EUSH-vre',
+		'baseURL'          => '/VRE_data_api/public/',
 		'dataDir'          =>  __DIR__ . '/../../files/',
 		'api' => [
-			'tokenVerify_keycloak' => 'https://inb.bsc.es/auth/realms/mug/protocol/openid-connect/userinfo',
+			'tokenVerify_keycloak' => 'https://inb.bsc.es/auth/realms/eucanshare/protocol/openid-connect/userinfo',
 			'tokenVerify_google'   => 'https://www.googleapis.com/oauth2/v3/tokeninfo'
 		],
 		'http_codes' => [

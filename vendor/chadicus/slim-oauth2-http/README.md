@@ -3,8 +3,6 @@
 [![Build Status](https://travis-ci.org/chadicus/slim-oauth2-http.svg?branch=master)](https://travis-ci.org/chadicus/slim-oauth2-http)
 [![Code Quality](https://scrutinizer-ci.com/g/chadicus/slim-oauth2-http/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/chadicus/slim-oauth2-http/?branch=master)
 [![Code Coverage](https://coveralls.io/repos/github/chadicus/slim-oauth2-http/badge.svg?branch=master)](https://coveralls.io/github/chadicus/slim-oauth2-http?branch=master)
-[![Dependency Status](https://www.versioneye.com/user/projects/584459fdb1c38c0aa1cd471b/badge.svg?style=flat)](https://www.versioneye.com/user/projects/584459fdb1c38c0aa1cd471b)
-[![Reference Status](https://www.versioneye.com/php/chadicus:slim-oauth2-http/reference_badge.svg?style=flat)](https://www.versioneye.com/php/chadicus:slim-oauth2-http/references)
 
 [![Latest Stable Version](https://poser.pugx.org/chadicus/slim-oauth2-http/v/stable)](https://packagist.org/packages/chadicus/slim-oauth2-http)
 [![Latest Unstable Version](https://poser.pugx.org/chadicus/slim-oauth2-http/v/unstable)](https://packagist.org/packages/chadicus/slim-oauth2-http)
@@ -22,47 +20,50 @@ Static utilitiy classes to bridge [PSR-7](http://www.php-fig.org/psr/psr-7/) htt
 
 Chadicus\Slim\OAuth2\Http requires PHP 5.6 (or later).
 
-##Composer
+## Composer
 To add the library as a local, per-project dependency use [Composer](http://getcomposer.org)! Simply add a dependency on `chadicus/slim-oauth2-http` to your project's `composer.json` file such as:
 
 ```sh
 composer require chadicus/slim-oauth2-http
 ```
 
-##Contact
+## Contact
 Developers may be contacted at:
 
  * [Pull Requests](https://github.com/chadicus/slim-oauth2-http/pulls)
  * [Issues](https://github.com/chadicus/slim-oauth2-http/issues)
 
-##Project Build
+## Project Build
 With a checkout of the code get [Composer](http://getcomposer.org) in your PATH and run:
 
 ```sh
 composer install
 ./vendor/bin/phpunit
-./vendor/bin/phpcs --standard=./vendor/chadicus/coding-standard/Chadicus -n src
+./vendor/bin/phpcs
 ```
 
-##Available Operations
+## Community
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/slim-oauth2/Lobby#)
 
-###Convert a PSR-7 request to an OAuth2 request
+## Available Operations
+
+### Convert a PSR-7 request to an OAuth2 request
 ```php
 use Chadicus\Slim\OAuth2\Http\RequestBridge;
 
 $oauth2Request = RequestBridge::toOAuth2($psrRequest);
 ```
 
-###Convert an OAuth2 response to a PSR-7 response.
+### Convert an OAuth2 response to a PSR-7 response.
 ```php
 use Chadicus\Slim\OAuth2\Http\ResponseBridge;
 
 $psr7Response = ResponseBridge::fromOAuth2($oauth2Request);
 ```
 
-##Example Integeration
+## Example Integeration
 
-###Simple route for creating a new oauth2 access token
+### Simple route for creating a new oauth2 access token
 ```php
 use Chadicus\Slim\OAuth2\Http\RequestBridge;
 use Chadicus\Slim\OAuth2\Http\ResponseBridge;

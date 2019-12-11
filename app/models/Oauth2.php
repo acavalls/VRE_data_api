@@ -72,19 +72,20 @@ class Oauth2 extends Model {
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 
 		$result = curl_exec($ch);
-                if ($result === false){
-                        $code = curl_errno($ch);
-                        $msg = curl_strerror($errno);
-			throw new \Exception($msg,$code);
-			die();
-                }
 
-		$call  =curl_getinfo($ch);
-		if ($call['http_code'] != 200){
-			throw new \Exception("Authorization server returns: ".$this->global['http_codes'][$call['http_code']],$call['http_code']);
+		if ($result === false) {
+			$code = curl_errno($ch);
+			$msg = curl_strerror($errno);
+			throw new \Exception($msg, $code);
 			die();
-                }
-        curl_close($ch);
+		}
+
+		$call  = curl_getinfo($ch);
+		if ($call['http_code'] != 200) {
+			throw new \Exception("Authorization server returns: " . $this->global['http_codes'][$call['http_code']], $call['http_code']);
+			die();
+		}
+		curl_close($ch);
 
         $result_arr = json_decode($result,TRUE);
         if (json_last_error() == JSON_ERROR_NONE)

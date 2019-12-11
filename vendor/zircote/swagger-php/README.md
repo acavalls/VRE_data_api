@@ -40,11 +40,12 @@ Add annotations to your php files.
  * )
  */
 ```
-See the Examples directory for more.
+See the [Getting started guide](docs/Getting-started.md) and [Examples directory](Examples/) for more examples.
+
 
 ### Usage from php
 
-Generate always-up-to-date the swagger documentation dynamically.
+Generate always-up-to-date documentation.
 
 ```php
 <?php
@@ -75,11 +76,21 @@ $swagger = $serializer->deserialize($jsonString, 'Swagger\Annotations\Swagger');
 echo $swagger;
 ```
 
+### Usage from [docker](https://docker.com)
+
+Generate the swagger documentation to a static json file.
+
+```
+docker run -v "$PWD":/app -it tico/swagger-php --help
+```
+
 ## More on Swagger
 
   * http://swagger.io/
   * https://github.com/swagger-api/swagger-spec/
   * http://bfanger.github.io/swagger-explained/
+  * [Related projects](docs/Related-projects.md)
+  * https://www.marcoraddatz.com/en/2015/07/21/integrate-swagger-into-laravel/
 
 ## Contributing
 

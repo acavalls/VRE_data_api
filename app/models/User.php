@@ -4,20 +4,20 @@ namespace App\Models;
 class User extends Model {
 
         protected $table = 'users';
+        
+        public function userExists($vre_id) {
 
-        public function userExists($userLogin) {
-
-                $r = $this->db->getDocuments($this->table, ['_id' => $userLogin], []);
+                $r = $this->db->getDocuments($this->table, ['id' => $vre_id], []);
 
                 if(empty($r) === true) return false;
-                elseif(sizeof($r) > 0) return true;
 
+                elseif(sizeof($r) > 0) return true;
         }
 
-        public function getUser($userLogin) {
+        public function getUser($vre_id) {
 
-                $r = reset($this->db->getDocuments($this->table, ['_id' => $userLogin], []));
+                $r = reset($this->db->getDocuments($this->table, ['id' => $vre_id], []));
+                
                 return $r;
-
         }
 }

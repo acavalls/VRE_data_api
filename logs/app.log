@@ -1389,9 +1389,9 @@
 [2017-07-18 14:30:17] VRE logger.ERROR: code:401 error:No resource owner information. Id=MuGUSER57ecf22d91df3_57ff97b606c873.8287979; Repository=VRE_BSC; [] {"uid":"79512ff"}
 [2017-07-18 14:37:25] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"6086cce"}
 [2017-07-18 14:38:18] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"6658af7"}
-[2017-07-18 14:38:25] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'mug_id' [] {"uid":"d20ef79"}
-[2017-07-18 14:40:07] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'mug_id' [] {"uid":"74466e1"}
-[2017-07-18 14:40:43] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'mug_id' [] {"uid":"f7d79a9"}
+[2017-07-18 14:38:25] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"d20ef79"}
+[2017-07-18 14:40:07] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"74466e1"}
+[2017-07-18 14:40:43] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"f7d79a9"}
 [2017-07-18 14:41:20] VRE logger.INFO: 192.168.122.253 |  -- 'GET /VREapi/public/v1/content/MuGUSER5968cc290156d/uploads/README.md?access_token=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtcWlfZHE2NWxkaDdsOTNyUDBTenRaYUFZUnZBcXlsaXhabU9pN0IyUXc0In0.eyJqdGkiOiI2ZmJlZjhiMC05ZDc0LTRjYjMtYWM5NS1lMjYwODQxZDIwYzQiLCJleHAiOjE1MDAzODIzNjQsIm5iZiI6MCwiaWF0IjoxNTAwMzgxNDY0LCJpc3MiOiJodHRwczovL2luYi5ic2MuZXMvYXV0aC9yZWFsbXMvbXVnIiwiYXVkIjoibXVnIiwic3ViIjoiYWI2YzdmNTgtMTYxMS00Njk3LWE3OWUtMTdmNzMzMmU5YjE1IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibXVnIiwiYXV0aF90aW1lIjoxNTAwMzgxNDY0LCJzZXNzaW9uX3N0YXRlIjoiYWUwMjZlZTQtMGY1OC00N2I2LTk2MWUtMzg1ZjdlMTNjYTk4IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6W10sInJlc291cmNlX2FjY2VzcyI6e30sImZpcnN0TmFtZSI6IkxhaWEiLCJsYXN0TmFtZSI6IkNvZMOzIiwibmFtZSI6IkxhaWEgQ29kw7MiLCJlbWFpbCI6ImxhaWFjb2RvQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoibGFpYWNvZG9AZ21haWwuY29tIn0.jB5q-5-ohr-yd4cX4ydLVOmewvwDyBYFDVv4w5i0GYq9uIVhbRFMOpQmLkhZnXBi8_U76Io3DeKpzjNFCVEqNZjS24X3XVImPIJEUzPlpTE5nAdCOq2HIv1VoyiAO6gJ1iUD3L7Ni6J43P3SOv3mxDBWWpW7Lq4xyID_Pf5fiersnb8cYY34o5NGctY0yFaGpOHhbdXrIuMa9pmn3sYjtQ2nGvHDc_pH1u-dS6F2tjrXxUpAQsiwLiKzqxpORpKkuhzUEdw5FTFTIsHnvfbyKtdXkMvxhkUlTquKHPCAGxKBuLlLWCI1ctvm2zDG4EiNEAZDm-tVOPXwY4IHSrIZTA' [] {"uid":"8f71c14"}
 [2017-07-18 14:41:20] VRE logger.ERROR: code 422: error: Resource not available. Id=MuGUSER5968cc290156d/uploads/README.md; Repository=VRE_BSC; File_path=/var/www/html/VREapi/app/../../files/MuGUSER5968cc290156d/uploads/README.md; [] {"uid":"8f71c14"}
 [2017-07-18 14:41:20] VRE logger.ERROR: code:422 error:Resource not available. Id=MuGUSER5968cc290156d/uploads/README.md; Repository=VRE_BSC; File_path=/var/www/html/VREapi/app/../../files/MuGUSER5968cc290156d/uploads/README.md; [] {"uid":"8f71c14"}
@@ -1435,3 +1435,931 @@
 [2017-07-19 13:14:29] VRE logger.INFO: 192.168.122.253 |  -- 'GET /VREapi/public/v1/files/MuGUSER5968cc290156d_5968cc2954a382.7980548?access_token=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtcWlfZHE2NWxkaDdsOTNyUDBTenRaYUFZUnZBcXlsaXhabU9pN0IyUXc0In0.eyJqdGkiOiIyYjM2YzEyNS1jNjE2LTQ5YmEtYjZjNi0wOTJhNDdkN2VkNTMiLCJleHAiOjE1MDA0NjMzNzUsIm5iZiI6MCwiaWF0IjoxNTAwNDYyNDc1LCJpc3MiOiJodHRwczovL2luYi5ic2MuZXMvYXV0aC9yZWFsbXMvbXVnIiwiYXVkIjoibXVnIiwic3ViIjoiNDM4MTc3MDktOGI2Yi00YTQzLTgxNmItMTFlMTE2NmMzYjUwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibXVnIiwiYXV0aF90aW1lIjoxNTAwNDYyNDc1LCJzZXNzaW9uX3N0YXRlIjoiNzM4NzQzNTUtZWY2My00OTM3LWE4YmItNTRmNmMyZjQxMGU5IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6W10sInJlc291cmNlX2FjY2VzcyI6e30sImZpcnN0TmFtZSI6IlJvbWluYSIsImxhc3ROYW1lIjoiUm95byIsIm5hbWUiOiJSb21pbmEgUm95byIsImVtYWlsIjoicnVkdW5lbEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJ1ZHVuZWxAZ21haWwuY29tIn0.U3VZX9e-KMVe-XwcdBnYD7Yba_t6kUJj1j-VZR6fWO-94XD3-HKsOzzaBPROzXsefVWDPWh3ajHEpopRbruYdiXsXdp3N4tVuuUfegduwABw-Nrb7MerpUsyBwxcGp0nV8_oAPsjM7i2vnh5Vb8aOL97AR881awLpeHZkyzNnZT9zOwJYfOPwh50--CJskgd82jtZdtWJECr92kC-nhkl_QfBHM3kFr2hY1PqYUWXKdUummYXia9z8Ln24LT2BuEiEAKy_bo9QEf9QfvwjP0WANyz-hXii_jCuCJbxshkxWHkIhSwN-hSCD9Ow6SDkWlFJMdJ9TcWqYELNHyYdCUng' [] {"uid":"cc06dba"}
 [2017-07-19 13:14:29] VRE logger.ERROR: code:404 error:Resource not found. Id=MuGUSER5968cc290156d_5968cc2954a382.7980548; Repository=VRE_BSC; Login=rudunel@gmail.com; [] {"uid":"cc06dba"}
 [2017-07-19 13:15:03] VRE logger.INFO: 192.168.122.253 |  -- 'GET /VREapi/public/v1/files/MuGUSER596f3d8b0f3ef_596f3d8b4c0864.59534206?access_token=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtcWlfZHE2NWxkaDdsOTNyUDBTenRaYUFZUnZBcXlsaXhabU9pN0IyUXc0In0.eyJqdGkiOiIyYjM2YzEyNS1jNjE2LTQ5YmEtYjZjNi0wOTJhNDdkN2VkNTMiLCJleHAiOjE1MDA0NjMzNzUsIm5iZiI6MCwiaWF0IjoxNTAwNDYyNDc1LCJpc3MiOiJodHRwczovL2luYi5ic2MuZXMvYXV0aC9yZWFsbXMvbXVnIiwiYXVkIjoibXVnIiwic3ViIjoiNDM4MTc3MDktOGI2Yi00YTQzLTgxNmItMTFlMTE2NmMzYjUwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibXVnIiwiYXV0aF90aW1lIjoxNTAwNDYyNDc1LCJzZXNzaW9uX3N0YXRlIjoiNzM4NzQzNTUtZWY2My00OTM3LWE4YmItNTRmNmMyZjQxMGU5IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6W10sInJlc291cmNlX2FjY2VzcyI6e30sImZpcnN0TmFtZSI6IlJvbWluYSIsImxhc3ROYW1lIjoiUm95byIsIm5hbWUiOiJSb21pbmEgUm95byIsImVtYWlsIjoicnVkdW5lbEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJ1ZHVuZWxAZ21haWwuY29tIn0.U3VZX9e-KMVe-XwcdBnYD7Yba_t6kUJj1j-VZR6fWO-94XD3-HKsOzzaBPROzXsefVWDPWh3ajHEpopRbruYdiXsXdp3N4tVuuUfegduwABw-Nrb7MerpUsyBwxcGp0nV8_oAPsjM7i2vnh5Vb8aOL97AR881awLpeHZkyzNnZT9zOwJYfOPwh50--CJskgd82jtZdtWJECr92kC-nhkl_QfBHM3kFr2hY1PqYUWXKdUummYXia9z8Ln24LT2BuEiEAKy_bo9QEf9QfvwjP0WANyz-hXii_jCuCJbxshkxWHkIhSwN-hSCD9Ow6SDkWlFJMdJ9TcWqYELNHyYdCUng' [] {"uid":"eba492c"}
+[2019-11-11 13:35:06] VRE logger.INFO: MUG: Visiting '/caca.json' route [] {"uid":"96ca825"}
+[2019-11-11 15:56:34] VRE logger.ERROR: code:0 error:Callable \staticPages does not exist [] {"uid":"e798895"}
+[2019-11-11 15:57:26] VRE logger.ERROR: code:0 error:Callable dfgdfgdg\staticPages does not exist [] {"uid":"7c93ee6"}
+[2019-11-11 15:57:27] VRE logger.ERROR: code:0 error:Callable dfgdfgdg\staticPages does not exist [] {"uid":"2e88cc4"}
+[2019-11-11 15:57:28] VRE logger.ERROR: code:0 error:Callable dfgdfgdg\staticPages does not exist [] {"uid":"20e1153"}
+[2019-11-11 15:57:29] VRE logger.ERROR: code:0 error:Callable dfgdfgdg\staticPages does not exist [] {"uid":"734f78e"}
+[2019-11-11 15:57:51] VRE logger.ERROR: code:0 error:Callable taticPages does not exist [] {"uid":"2993fdd"}
+[2019-11-11 15:58:30] VRE logger.ERROR: code:0 error:Callable StaticPages does not exist [] {"uid":"3180c0f"}
+[2019-11-11 15:59:29] VRE logger.ERROR: code:0 error:Callable StaticPages does not exist [] {"uid":"8a766ac"}
+[2019-11-11 16:36:28] VRE logger.ERROR: code:0 error:Callable \staticPages does not exist [] {"uid":"f9182f6"}
+[2019-11-11 16:38:35] VRE logger.ERROR: code:0 error:Callable \staticPages does not exist [] {"uid":"fa9a87f"}
+[2019-11-11 16:39:52] VRE logger.ERROR: code:0 error:Callable StaticPages does not exist [] {"uid":"ae22f01"}
+[2019-11-11 18:13:49] VRE logger.ERROR: code:0 error:Callable StaticPages does not exist [] {"uid":"fcfeb1b"}
+[2019-11-11 18:13:58] VRE logger.ERROR: code:0 error:Callable StaticPages does not exist [] {"uid":"ae7ab72"}
+[2019-11-11 18:14:00] VRE logger.ERROR: code:0 error:Callable StaticPages does not exist [] {"uid":"502dd9f"}
+[2019-11-11 18:45:04] VRE logger.ERROR: code:0 error:Callable StaticPages does not exist [] {"uid":"6cb27ee"}
+[2019-11-11 18:45:25] VRE logger.ERROR: code:0 error:Callable StaticPages does not exist [] {"uid":"6535adf"}
+[2019-11-11 18:47:20] VRE logger.ERROR: code:0 error:Callable \HomeController does not exist [] {"uid":"8dc35e4"}
+[2019-11-11 18:48:45] VRE logger.ERROR: code:0 error:Callable \StaticPagesController does not exist [] {"uid":"34ef97b"}
+[2019-11-11 18:49:08] VRE logger.ERROR: code:0 error:Callable staticPagesController does not exist [] {"uid":"8cf8b39"}
+[2019-11-12 10:18:49] VRE logger.ERROR: code:0 error:Callable \apiController does not exist [] {"uid":"d6a63da"}
+[2019-11-12 10:21:29] VRE logger.ERROR: code:0 error:Callable \apiController does not exist [] {"uid":"c45da8a"}
+[2019-11-12 11:11:35] VRE logger.ERROR: code:0 error:Callable \staticPages does not exist [] {"uid":"94df941"}
+[2019-11-12 12:11:25] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"a3afcb8"}
+[2019-11-12 14:33:34] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"d92660a"}
+[2019-11-12 14:35:42] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"53117c3"}
+[2019-11-12 14:38:24] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"a409802"}
+[2019-11-12 15:04:15] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"b6769de"}
+[2019-11-12 15:13:33] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"447367a"}
+[2019-11-12 15:14:01] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"3c0c2b9"}
+[2019-11-12 15:14:44] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"13e27ce"}
+[2019-11-12 15:15:12] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"cf43c61"}
+[2019-11-12 15:40:32] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"4c4d1f3"}
+[2019-11-12 15:40:40] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"ae75c70"}
+[2019-11-12 15:42:20] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"742c943"}
+[2019-11-12 15:44:28] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"5d6cc32"}
+[2019-11-12 15:51:19] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"a83621b"}
+[2019-11-12 15:51:25] VRE logger.ERROR: code:0 error:[null,"home"] is not resolvable [] {"uid":"4da0489"}
+[2019-11-12 15:54:35] VRE logger.INFO: 127.0.0.1 |  -- 'GET /whatever' [] {"uid":"4c3666c"}
+[2019-11-12 15:54:35] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"4c3666c"}
+[2019-11-12 15:57:49] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"7f75f0d"}
+[2019-11-12 15:57:49] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"7f75f0d"}
+[2019-11-12 16:07:45] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"88362f9"}
+[2019-11-12 16:07:45] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"88362f9"}
+[2019-11-12 16:44:49] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"dd76f4e"}
+[2019-11-12 16:44:49] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"dd76f4e"}
+[2019-11-12 17:26:01] VRE logger.ERROR: code:0 error:The "/var/www/html/VRE_data_api/app" directory does not exist. [] {"uid":"65bbbb7"}
+[2019-11-12 17:26:17] VRE logger.ERROR: code:0 error:The "/var/www/html/VRE_data_api/app" directory does not exist. [] {"uid":"1f516f3"}
+[2019-11-12 17:27:45] VRE logger.ERROR: code:0 error:The "/var/www/html/VRE_data_api/app" directory does not exist. [] {"uid":"b6f2b72"}
+[2019-11-12 19:27:31] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"4ed2b10"}
+[2019-11-12 19:29:12] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"3d553c4"}
+[2019-11-12 19:29:45] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"6ce9acd"}
+[2019-11-12 19:31:12] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"df973cf"}
+[2019-11-13 10:13:39] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"b67737a"}
+[2019-11-13 10:20:57] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"78e8047"}
+[2019-11-13 10:20:57] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"78e8047"}
+[2019-11-13 10:23:21] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"6c6e782"}
+[2019-11-13 10:23:21] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"6c6e782"}
+[2019-11-13 10:35:12] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"23dad11"}
+[2019-11-13 10:38:31] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"faad27b"}
+[2019-11-13 10:50:14] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"c4f74bb"}
+[2019-11-13 10:52:01] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"2c82fdd"}
+[2019-11-13 10:53:16] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"07f369b"}
+[2019-11-13 10:53:16] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"07f369b"}
+[2019-11-13 10:53:35] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"00dc282"}
+[2019-11-13 10:54:01] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"3c1666f"}
+[2019-11-13 10:55:03] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"35fdf8e"}
+[2019-11-13 10:55:07] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"4db759f"}
+[2019-11-13 10:55:07] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"4db759f"}
+[2019-11-13 10:55:41] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"ca7c711"}
+[2019-11-13 12:42:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"5981d01"}
+[2019-11-13 12:42:05] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"5981d01"}
+[2019-11-13 12:43:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"6c28287"}
+[2019-11-13 13:04:50] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"4d2cae5"}
+[2019-11-13 13:04:50] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"4d2cae5"}
+[2019-11-13 13:54:06] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"da9407e"}
+[2019-11-13 13:54:06] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"da9407e"}
+[2019-11-13 13:54:55] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.json' [] {"uid":"32fbd59"}
+[2019-11-13 13:54:55] VRE logger.ERROR: code 422: error: Resource not available. Id=dummy.json; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummy.json; [] {"uid":"32fbd59"}
+[2019-11-13 13:54:55] VRE logger.ERROR: code:422 error:Resource not available. Id=dummy.json; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummy.json; [] {"uid":"32fbd59"}
+[2019-11-13 13:55:53] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"bb8974f"}
+[2019-11-13 13:58:30] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"1223420"}
+[2019-11-13 14:43:48] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"b38cf75"}
+[2019-11-13 14:44:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder2' [] {"uid":"c357f61"}
+[2019-11-13 14:44:17] VRE logger.ERROR: code 422: error: Resource not available. Id=dummyfolder2; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummyfolder2; [] {"uid":"c357f61"}
+[2019-11-13 14:44:18] VRE logger.ERROR: code:422 error:Resource not available. Id=dummyfolder2; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummyfolder2; [] {"uid":"c357f61"}
+[2019-11-13 14:45:06] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder.txt' [] {"uid":"501ffc4"}
+[2019-11-13 14:45:06] VRE logger.ERROR: code 422: error: Resource not available. Id=dummyfolder.txt; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummyfolder.txt; [] {"uid":"501ffc4"}
+[2019-11-13 14:45:06] VRE logger.ERROR: code:422 error:Resource not available. Id=dummyfolder.txt; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummyfolder.txt; [] {"uid":"501ffc4"}
+[2019-11-13 14:46:12] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"6abf1bb"}
+[2019-11-13 14:47:45] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy' [] {"uid":"96f39e6"}
+[2019-11-13 14:47:45] VRE logger.ERROR: code 422: error: Resource not available. Id=dummy; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummy; [] {"uid":"96f39e6"}
+[2019-11-13 14:47:45] VRE logger.ERROR: code:422 error:Resource not available. Id=dummy; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummy; [] {"uid":"96f39e6"}
+[2019-11-13 14:56:24] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"e925fc3"}
+[2019-11-13 14:57:11] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"2b8ae71"}
+[2019-11-13 15:00:26] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"1ffbc80"}
+[2019-11-13 15:00:39] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.tx' [] {"uid":"76f06dd"}
+[2019-11-13 15:00:39] VRE logger.ERROR: code 422: error: Resource not available. Id=dummy.tx; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummy.tx; [] {"uid":"76f06dd"}
+[2019-11-13 15:00:39] VRE logger.ERROR: code:422 error:Resource not available. Id=dummy.tx; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummy.tx; [] {"uid":"76f06dd"}
+[2019-11-13 15:01:28] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"7bc6fda"}
+[2019-11-13 15:02:13] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"b821f18"}
+[2019-11-13 15:03:15] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder/dummy2.txt' [] {"uid":"ab2f722"}
+[2019-11-13 15:04:01] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"41a58ba"}
+[2019-11-13 15:04:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"8d676b7"}
+[2019-11-13 15:04:27] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"93c3c77"}
+[2019-11-13 15:06:06] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"5a42414"}
+[2019-11-13 15:07:15] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"f2544b8"}
+[2019-11-13 15:08:27] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder2' [] {"uid":"708f72b"}
+[2019-11-13 15:08:27] VRE logger.ERROR: code 422: error: Resource not available. Id=dummyfolder2; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummyfolder2; [] {"uid":"708f72b"}
+[2019-11-13 15:08:27] VRE logger.ERROR: code:422 error:Resource not available. Id=dummyfolder2; Repository=VRE_BSC; File_path=/home/user/VRE_data_api/app/../../files/dummyfolder2; [] {"uid":"708f72b"}
+[2019-11-13 15:08:34] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"2a986a6"}
+[2019-11-13 15:08:46] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"0a87072"}
+[2019-11-13 15:09:40] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"7092831"}
+[2019-11-13 15:10:55] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"d8f6fcf"}
+[2019-11-13 15:11:54] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"f499757"}
+[2019-11-13 15:12:46] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"9ca10b9"}
+[2019-11-13 15:13:29] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummyfolder' [] {"uid":"c56fdb9"}
+[2019-11-14 08:57:59] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"a159c5d"}
+[2019-11-14 08:57:59] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"a159c5d"}
+[2019-11-14 08:58:03] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"8e5d2fc"}
+[2019-11-14 08:58:03] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"8e5d2fc"}
+[2019-11-14 09:00:42] VRE logger.INFO: 127.0.0.1 |  -- 'GET /content/dummy.txt' [] {"uid":"5876a0e"}
+[2019-11-14 09:08:24] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"3efa231"}
+[2019-11-14 09:08:24] VRE logger.INFO: MUG: Visiting '/home' route [] {"uid":"3efa231"}
+[2019-11-14 09:10:21] VRE logger.ERROR: code:401 error:User authentication failed. Token not found [] {"uid":"c158536"}
+[2019-11-14 09:30:00] VRE logger.ERROR: code:401 error:User authentication failed. Token not found [] {"uid":"180dc8b"}
+[2019-11-14 09:34:47] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"3511bc5"}
+[2019-11-14 09:40:33] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"12a5983"}
+[2019-11-14 09:56:32] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"b5dadff"}
+[2019-11-14 11:47:43] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"ae58783"}
+[2019-11-14 11:50:03] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"99a9dce"}
+[2019-11-14 12:27:32] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"c8f80e5"}
+[2019-11-14 12:28:38] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"070d747"}
+[2019-11-14 12:28:38] VRE logger.ERROR: code:401 error:User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=dummy.txt; Repository=EuCanSHare_VRE; [] {"uid":"070d747"}
+[2019-11-14 12:29:41] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"0c4311f"}
+[2019-11-14 12:31:09] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"a838fe1"}
+[2019-11-14 12:44:48] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"75c799a"}
+[2019-11-14 12:44:48] VRE logger.ERROR: code:401 error:No resource owner information. Id=dummy.txt; Repository=EuCanSHare_VRE; [] {"uid":"75c799a"}
+[2019-11-14 12:45:29] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"c53778d"}
+[2019-11-14 12:45:29] VRE logger.ERROR: code:401 error:No resource owner information. Id=dummy.txt; Repository=EuCanSHare_VRE; [] {"uid":"c53778d"}
+[2019-11-14 12:46:27] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"6925ce3"}
+[2019-11-14 12:46:27] VRE logger.ERROR: code:401 error:User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=dummy.txt; Repository=EuCanSHare_VRE; [] {"uid":"6925ce3"}
+[2019-11-14 12:47:13] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"b895d8d"}
+[2019-11-14 12:48:45] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"fb91a01"}
+[2019-11-14 12:48:45] VRE logger.ERROR: code:401 error:user_rootDir=dummy.txt, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=dummy.txt; Repository=EuCanSHare_VRE; [] {"uid":"fb91a01"}
+[2019-11-14 12:50:16] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"b2410e1"}
+[2019-11-14 12:50:16] VRE logger.ERROR: code:401 error:user_rootDir=dummy.txt, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=dummy.txt; Repository=EuCanSHare_VRE; [] {"uid":"b2410e1"}
+[2019-11-14 12:52:47] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"3cef1fc"}
+[2019-11-14 12:52:47] VRE logger.ERROR: code:401 error:user_rootDir=dummy.txt, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=dummy.txt; Repository=EuCanSHare_VRE; [] {"uid":"3cef1fc"}
+[2019-11-14 12:52:57] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"0871adf"}
+[2019-11-14 12:52:57] VRE logger.ERROR: code:401 error:user_rootDir=dummy.txt, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=dummy.txt; Repository=EuCanSHare_VRE; [] {"uid":"0871adf"}
+[2019-11-14 12:53:16] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"29c9b29"}
+[2019-11-14 12:53:16] VRE logger.ERROR: code:401 error:user_rootDir=dummy.txt, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=dummy.txt; Repository=EuCanSHare_VRE; [] {"uid":"29c9b29"}
+[2019-11-14 12:57:14] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txt' [] {"uid":"ec5f3d9"}
+[2019-11-14 12:57:14] VRE logger.ERROR: code:401 error:user_rootDir=dummy.txt, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=dummy.txt; Repository=EuCanSHare_VRE; [] {"uid":"ec5f3d9"}
+[2019-11-14 12:58:52] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/dummy.txthhh' [] {"uid":"c45a0dc"}
+[2019-11-14 12:58:52] VRE logger.ERROR: code:401 error:user_rootDir=dummy.txthhh, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=dummy.txthhh; Repository=EuCanSHare_VRE; [] {"uid":"c45a0dc"}
+[2019-11-14 13:00:16] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"5efccdc"}
+[2019-11-14 13:04:34] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/__PROJ5dcc2e5102c0c3.56618574/uploads/README.md' [] {"uid":"e9be811"}
+[2019-11-14 13:04:34] VRE logger.ERROR: code:401 error:user_rootDir=__PROJ5dcc2e5102c0c3.56618574, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=__PROJ5dcc2e5102c0c3.56618574/uploads/README.md; Repository=EuCanSHare_VRE; [] {"uid":"e9be811"}
+[2019-11-14 13:05:41] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/__PROJ5dcc2e5102c0c3.56618574/uploads/README.md' [] {"uid":"eddfcff"}
+[2019-11-14 13:05:41] VRE logger.ERROR: code:401 error:user_rootDir=__PROJ5dcc2e5102c0c3.56618574, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=__PROJ5dcc2e5102c0c3.56618574/uploads/README.md; Repository=EuCanSHare_VRE; [] {"uid":"eddfcff"}
+[2019-11-14 13:06:26] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/__PROJ5dcc2e5102c0c3.56618574/uploads/READMEss.md' [] {"uid":"58c6e19"}
+[2019-11-14 13:06:26] VRE logger.ERROR: code:401 error:user_rootDir=__PROJ5dcc2e5102c0c3.56618574, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=__PROJ5dcc2e5102c0c3.56618574/uploads/READMEss.md; Repository=EuCanSHare_VRE; [] {"uid":"58c6e19"}
+[2019-11-14 13:06:50] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/__PROJ5dcc2e5102c0c3.56618574/uploads/READMEsfgggf.md' [] {"uid":"fd967d4"}
+[2019-11-14 13:06:50] VRE logger.ERROR: code:401 error:user_rootDir=__PROJ5dcc2e5102c0c3.56618574, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=__PROJ5dcc2e5102c0c3.56618574/uploads/READMEsfgggf.md; Repository=EuCanSHare_VRE; [] {"uid":"fd967d4"}
+[2019-11-14 13:13:01] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/__PROJ5dcc2e5102c0c3.56618574/uploads/README.md' [] {"uid":"0ff94f6"}
+[2019-11-14 13:13:01] VRE logger.ERROR: code:401 error:user_rootDir=__PROJ5dcc2e5102c0c3.56618574, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=__PROJ5dcc2e5102c0c3.56618574/uploads/README.md; Repository=EuCanSHare_VRE; [] {"uid":"0ff94f6"}
+[2019-11-14 13:13:10] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/__PROJ5dcc2e5102c0c3.56618574/uploads/READMEss.md' [] {"uid":"a2500cc"}
+[2019-11-14 13:13:10] VRE logger.ERROR: code:401 error:user_rootDir=__PROJ5dcc2e5102c0c3.56618574, User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=__PROJ5dcc2e5102c0c3.56618574/uploads/READMEss.md; Repository=EuCanSHare_VRE; [] {"uid":"a2500cc"}
+[2019-11-14 13:16:38] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/READMEss.md' [] {"uid":"572660c"}
+[2019-11-14 13:16:38] VRE logger.ERROR: code 422: error: Resource not available. Id=EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/READMEss.md; Repository=EuCanSHare_VRE; File_path=/home/user/VRE_data_api/app/../../files/EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/READMEss.md; [] {"uid":"572660c"}
+[2019-11-14 13:16:38] VRE logger.ERROR: code:422 error:Resource not available. Id=EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/READMEss.md; Repository=EuCanSHare_VRE; File_path=/home/user/VRE_data_api/app/../../files/EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/READMEss.md; [] {"uid":"572660c"}
+[2019-11-14 13:17:09] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/README.md' [] {"uid":"3372bc3"}
+[2019-11-14 14:36:12] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/README.md' [] {"uid":"91fdfe9"}
+[2019-11-14 14:38:04] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/README.md' [] {"uid":"7d9cba3"}
+[2019-11-14 14:38:50] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/README.md' [] {"uid":"713daca"}
+[2019-11-14 14:42:56] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/README.md' [] {"uid":"0ace54f"}
+[2019-11-14 14:43:08] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/README.md' [] {"uid":"df224a2"}
+[2019-11-14 15:35:05] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"6e64825"}
+[2019-11-14 15:36:32] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcc2e5102c0c3.56618574/uploads/README.md' [] {"uid":"fec24dd"}
+[2019-11-28 09:50:36] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"31de250"}
+[2019-11-28 10:49:15] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"14de150"}
+[2019-11-28 10:50:16] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"b231bf5"}
+[2019-11-28 11:02:29] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"89e5235"}
+[2019-11-28 11:02:29] VRE logger.ERROR: code:401 error:No resource owner information. Id=EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md; Repository=EuCanSHare_VRE; [] {"uid":"89e5235"}
+[2019-11-28 11:05:36] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"0594730"}
+[2019-11-28 11:05:55] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"e00c1c1"}
+[2019-11-28 11:07:21] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"ba09713"}
+[2019-11-28 11:07:31] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"53fe173"}
+[2019-11-28 11:07:58] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"6f76692"}
+[2019-11-28 11:08:40] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"f017a08"}
+[2019-11-28 11:08:51] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"5d1c088"}
+[2019-11-28 11:11:58] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"cea54ca"}
+[2019-11-28 11:12:10] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"a061146"}
+[2019-11-28 11:13:07] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"2a034a6"}
+[2019-11-28 11:14:33] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"763b438"}
+[2019-11-28 11:14:50] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"504a100"}
+[2019-11-28 11:17:11] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"83a88ef"}
+[2019-11-28 11:17:11] VRE logger.ERROR: code:401 error:No resource owner information. Id=EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md; Repository=EuCanSHare_VRE; [] {"uid":"83a88ef"}
+[2019-11-28 11:19:15] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"9a2e078"}
+[2019-11-28 11:23:11] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"6dfa550"}
+[2019-11-28 11:24:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"4730536"}
+[2019-11-28 11:24:15] VRE logger.ERROR: code:13053 error:No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on 'mmb.pcb.ub.es:27017'] [] {"uid":"4730536"}
+[2019-11-28 11:24:29] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"5f50af3"}
+[2019-11-28 11:24:39] VRE logger.ERROR: code:13053 error:No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on 'mmb.pcb.ub.es:27017'] [] {"uid":"5f50af3"}
+[2019-11-28 11:24:52] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"89fede2"}
+[2019-11-28 11:28:46] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"5d300e7"}
+[2019-11-28 11:30:17] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"becfeea"}
+[2019-11-28 11:31:37] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"90818dc"}
+[2019-11-28 11:32:11] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"08cb3f7"}
+[2019-11-28 11:32:21] VRE logger.ERROR: code:13053 error:No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on 'mmb.pcb.ub.es:27017'] [] {"uid":"08cb3f7"}
+[2019-11-28 11:32:35] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"c813848"}
+[2019-11-28 11:32:45] VRE logger.ERROR: code:13053 error:No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on 'mmb.pcb.ub.es:27017'] [] {"uid":"c813848"}
+[2019-11-28 11:32:58] VRE logger.ERROR: code:406 error:Token successfully authorized, but resource onwer retrieval failed. No 'vre_id' [] {"uid":"979744b"}
+[2019-11-28 11:37:52] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"8e95684"}
+[2019-11-28 11:38:36] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"51c0e74"}
+[2019-11-28 11:53:56] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"9ec7cae"}
+[2019-11-28 12:06:43] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"37b2612"}
+[2019-11-28 12:07:45] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"ea4124e"}
+[2019-12-02 09:50:55] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"24197cd"}
+[2019-12-02 09:57:48] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5dcd127e21d2f5.91198446/uploads/README.md' [] {"uid":"c948188"}
+[2019-12-02 10:09:02] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/README.md' [] {"uid":"cea8499"}
+[2019-12-02 10:18:44] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/README.md' [] {"uid":"51a2a8b"}
+[2019-12-02 10:31:40] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"0812efb"}
+[2019-12-02 10:32:25] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/README.md' [] {"uid":"c42daa5"}
+[2019-12-02 10:35:51] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/README.md' [] {"uid":"c7459a1"}
+[2019-12-02 10:37:28] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/README.md' [] {"uid":"a393e1e"}
+[2019-12-02 10:37:48] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/README.md' [] {"uid":"f81d383"}
+[2019-12-02 10:38:02] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/README.md' [] {"uid":"7218e69"}
+[2019-12-02 10:50:47] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/README.md' [] {"uid":"502545a"}
+[2019-12-02 10:53:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/content/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/README.md' [] {"uid":"86932eb"}
+[2019-12-02 11:21:19] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"71ad792"}
+[2019-12-02 11:22:07] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"76df9c9"}
+[2019-12-02 11:22:48] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"940d346"}
+[2019-12-02 11:26:43] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"f2ea414"}
+[2019-12-02 11:26:56] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"42058d2"}
+[2019-12-02 12:02:49] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"17d0b08"}
+[2019-12-02 12:03:46] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"a2e7be9"}
+[2019-12-02 12:04:12] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"6df61d3"}
+[2019-12-02 12:04:58] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"53bc75a"}
+[2019-12-02 12:05:24] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"7b60137"}
+[2019-12-02 12:06:21] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"680dc41"}
+[2019-12-02 12:06:41] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"b6b15bd"}
+[2019-12-02 12:07:22] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"65b50f6"}
+[2019-12-02 12:14:54] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"fce47b8"}
+[2019-12-02 12:16:07] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"4855083"}
+[2019-12-02 12:16:25] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"2512257"}
+[2019-12-02 12:16:48] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"90640c9"}
+[2019-12-02 12:19:06] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"c9c28e9"}
+[2019-12-02 12:19:31] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"f760617"}
+[2019-12-02 12:29:34] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"b3967c6"}
+[2019-12-02 12:31:48] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"f543aa2"}
+[2019-12-02 12:33:42] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"c83c888"}
+[2019-12-02 12:34:32] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"00bec24"}
+[2019-12-02 12:36:47] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"00e0f25"}
+[2019-12-02 12:38:05] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"8cd9c97"}
+[2019-12-02 12:38:51] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"8ed9bf4"}
+[2019-12-02 12:39:24] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"547b322"}
+[2019-12-02 12:41:22] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"5039bdd"}
+[2019-12-02 12:43:36] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"ca85400"}
+[2019-12-02 12:49:49] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"b3c5a4a"}
+[2019-12-02 12:49:53] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"91123cf"}
+[2019-12-02 12:50:36] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"5ab0a98"}
+[2019-12-02 12:54:19] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"c408d6d"}
+[2019-12-02 12:56:12] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"abfe6b2"}
+[2019-12-02 12:59:22] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"9e24ba5"}
+[2019-12-02 13:02:45] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"1d0c7f8"}
+[2019-12-02 13:02:59] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"c92c398"}
+[2019-12-02 13:05:16] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"440b27c"}
+[2019-12-02 13:23:35] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"26ea00d"}
+[2019-12-02 13:24:22] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"071aac7"}
+[2019-12-02 13:25:14] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"4c8bf73"}
+[2019-12-02 13:25:44] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"f741620"}
+[2019-12-02 13:26:06] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"c538502"}
+[2019-12-02 13:29:08] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"3e2fc1e"}
+[2019-12-02 13:29:27] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"3e96833"}
+[2019-12-02 13:31:31] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"70ed287"}
+[2019-12-02 13:33:07] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"bf0399c"}
+[2019-12-02 13:36:49] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"a5cc457"}
+[2019-12-02 14:23:17] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"6d3e535"}
+[2019-12-02 15:13:32] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"c877ff9"}
+[2019-12-02 15:15:06] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"f2c68d7"}
+[2019-12-02 15:18:28] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"1fede98"}
+[2019-12-02 15:19:43] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"ff7c9d6"}
+[2019-12-02 15:20:31] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"f0f21b3"}
+[2019-12-02 15:20:45] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"d924e2c"}
+[2019-12-02 15:21:49] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"f70668b"}
+[2019-12-02 15:24:25] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"c15b62f"}
+[2019-12-02 15:25:33] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"0d5b17f"}
+[2019-12-02 15:28:25] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"be83578"}
+[2019-12-02 15:29:27] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"865f885"}
+[2019-12-02 15:30:59] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"66a6204"}
+[2019-12-02 15:32:14] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"f96c3b0"}
+[2019-12-02 15:32:31] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"cd57fcd"}
+[2019-12-02 15:33:01] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"702838c"}
+[2019-12-02 15:37:32] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/' [] {"uid":"0c9164c"}
+[2019-12-02 15:42:50] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/dummy2.png' [] {"uid":"b72041b"}
+[2019-12-02 15:43:57] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/dummy2.png' [] {"uid":"9ff9409"}
+[2019-12-02 15:44:19] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de4d3cc87aa61.83060311/uploads/dummy2.txt' [] {"uid":"b032ed9"}
+[2019-12-02 15:48:25] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"a4b4fde"}
+[2019-12-02 15:48:44] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/postcontent/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy.png' [] {"uid":"bcd13e8"}
+[2019-12-02 16:18:21] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"a3666ca"}
+[2019-12-02 16:18:55] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/addFile/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy2.png' [] {"uid":"85bd198"}
+[2019-12-02 16:32:19] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy3.png' [] {"uid":"c54df3c"}
+[2019-12-02 16:40:33] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"78ee6a6"}
+[2019-12-02 16:42:42] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"fd733a5"}
+[2019-12-02 16:44:08] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"b338d9b"}
+[2019-12-02 16:45:08] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"4bf237d"}
+[2019-12-02 16:49:41] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"7ac1349"}
+[2019-12-02 16:50:20] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"d9be077"}
+[2019-12-02 16:51:23] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"597d9e9"}
+[2019-12-02 16:52:29] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"161c7d7"}
+[2019-12-02 16:56:28] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"901e0ef"}
+[2019-12-02 16:56:49] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"7bdf2ee"}
+[2019-12-02 16:57:34] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"fd30324"}
+[2019-12-02 16:58:39] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"5b38e8e"}
+[2019-12-02 16:59:19] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"afb5a5a"}
+[2019-12-02 16:59:27] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"b676653"}
+[2019-12-02 17:03:12] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"88c50dd"}
+[2019-12-02 17:03:51] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"17c41b9"}
+[2019-12-02 17:04:53] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"e3bfc43"}
+[2019-12-02 17:05:09] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"71e19bb"}
+[2019-12-02 17:05:54] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"270bba3"}
+[2019-12-02 17:06:34] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"eedd5eb"}
+[2019-12-02 17:07:12] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"c74cf6c"}
+[2019-12-02 17:07:23] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"f2b6ef3"}
+[2019-12-02 17:23:41] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"18b8264"}
+[2019-12-02 17:24:14] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"518703b"}
+[2019-12-02 17:25:38] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"44f1e5f"}
+[2019-12-02 17:26:04] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"60c307e"}
+[2019-12-02 17:27:04] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"c56eabe"}
+[2019-12-02 17:28:20] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"5581f84"}
+[2019-12-02 17:28:47] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"e3bcea9"}
+[2019-12-02 17:28:57] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"6a91c61"}
+[2019-12-02 17:30:44] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"475b3a8"}
+[2019-12-02 17:31:16] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"7561e42"}
+[2019-12-02 17:31:31] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"7295f68"}
+[2019-12-02 17:33:19] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"2d99672"}
+[2019-12-02 17:33:51] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"4289287"}
+[2019-12-02 17:42:58] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"286b09c"}
+[2019-12-02 17:44:02] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"ebd50ff"}
+[2019-12-02 17:44:09] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"a163337"}
+[2019-12-02 17:47:29] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"72f56c7"}
+[2019-12-02 17:57:05] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"7c1c5fd"}
+[2019-12-02 17:57:43] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"e878959"}
+[2019-12-02 17:59:26] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"cc78f83"}
+[2019-12-02 18:00:04] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"42384b6"}
+[2019-12-02 18:02:17] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"045dcf4"}
+[2019-12-02 18:02:44] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"3f80515"}
+[2019-12-02 18:03:45] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"cb0f7a5"}
+[2019-12-02 18:04:08] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"815f3e4"}
+[2019-12-02 18:05:25] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"d94724a"}
+[2019-12-02 18:06:59] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"4969464"}
+[2019-12-02 18:07:08] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"247b045"}
+[2019-12-02 18:08:51] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"d77b872"}
+[2019-12-02 18:09:33] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"dc54967"}
+[2019-12-02 18:11:46] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"396a905"}
+[2019-12-02 18:13:47] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"9b65c72"}
+[2019-12-02 18:14:07] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"085850b"}
+[2019-12-02 18:18:41] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"79d0392"}
+[2019-12-02 18:51:31] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"457706c"}
+[2019-12-02 18:52:05] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"76ae772"}
+[2019-12-02 18:52:07] VRE logger.ERROR: code:404 error:File upload has failed with code: 404 [] {"uid":"76ae772"}
+[2019-12-02 18:53:43] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"634bdff"}
+[2019-12-02 18:53:44] VRE logger.ERROR: code:404 error:File upload has failed [] {"uid":"634bdff"}
+[2019-12-02 18:53:56] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"5e25609"}
+[2019-12-02 18:54:11] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy5.png' [] {"uid":"1e6f0d5"}
+[2019-12-03 09:40:43] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"629b264"}
+[2019-12-03 09:40:50] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"610eedf"}
+[2019-12-03 10:01:25] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"da086c0"}
+[2019-12-03 15:43:35] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"11b9d3e"}
+[2019-12-03 15:44:16] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"3ac2624"}
+[2019-12-03 15:46:30] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"6e1d07d"}
+[2019-12-03 15:46:30] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"6e1d07d"}
+[2019-12-03 15:47:43] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"631534c"}
+[2019-12-03 15:47:43] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"631534c"}
+[2019-12-03 15:47:45] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"187a0dd"}
+[2019-12-03 15:47:45] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"187a0dd"}
+[2019-12-03 15:47:55] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/jjjkkj' [] {"uid":"8431ee7"}
+[2019-12-03 15:47:55] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"8431ee7"}
+[2019-12-03 15:48:35] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"2e1e53c"}
+[2019-12-03 15:48:35] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"2e1e53c"}
+[2019-12-03 15:49:10] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"bf2a1bc"}
+[2019-12-03 15:49:10] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"bf2a1bc"}
+[2019-12-03 15:49:48] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/3ek3kjr' [] {"uid":"0c442f4"}
+[2019-12-03 15:49:48] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"0c442f4"}
+[2019-12-03 15:50:44] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/3ek3kjr' [] {"uid":"308a554"}
+[2019-12-03 15:50:44] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"308a554"}
+[2019-12-03 15:51:49] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"33e5107"}
+[2019-12-03 15:51:49] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"33e5107"}
+[2019-12-03 15:54:43] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"9b083e3"}
+[2019-12-03 15:54:43] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"9b083e3"}
+[2019-12-03 15:57:09] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/eo' [] {"uid":"cd00fa1"}
+[2019-12-03 15:57:09] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"cd00fa1"}
+[2019-12-03 15:57:48] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/eo' [] {"uid":"f4ecd5c"}
+[2019-12-03 15:57:48] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"f4ecd5c"}
+[2019-12-03 15:59:17] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"635b62e"}
+[2019-12-03 16:00:03] VRE logger.INFO: 127.0.0.1 |  -- 'POST /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/dummy4.png' [] {"uid":"a21af20"}
+[2019-12-03 16:00:22] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"9dd9fc2"}
+[2019-12-03 16:00:22] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"9dd9fc2"}
+[2019-12-03 16:00:44] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c6e11ad"}
+[2019-12-03 16:00:44] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"c6e11ad"}
+[2019-12-03 16:01:11] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"17757b0"}
+[2019-12-03 16:01:11] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"17757b0"}
+[2019-12-03 16:01:27] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"8ecc928"}
+[2019-12-03 16:01:27] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"8ecc928"}
+[2019-12-03 16:15:37] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"2d10c24"}
+[2019-12-03 16:16:12] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"053647a"}
+[2019-12-03 16:16:46] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"4e6ad95"}
+[2019-12-03 16:16:46] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"4e6ad95"}
+[2019-12-03 16:17:27] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"52fca49"}
+[2019-12-03 16:17:46] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"963aba1"}
+[2019-12-03 16:18:23] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7ef90bc"}
+[2019-12-03 16:18:55] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"1f4cb53"}
+[2019-12-03 16:19:13] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c803c1e"}
+[2019-12-03 16:19:13] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"c803c1e"}
+[2019-12-03 16:20:03] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b5d85ff"}
+[2019-12-03 16:21:01] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7b90ad0"}
+[2019-12-03 16:21:50] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"6054372"}
+[2019-12-03 16:22:33] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"aba7fb1"}
+[2019-12-03 16:22:48] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"1e2b2cf"}
+[2019-12-03 16:23:20] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"03ee370"}
+[2019-12-03 16:24:00] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"12dea7e"}
+[2019-12-03 16:25:49] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"97fb2b4"}
+[2019-12-03 16:25:49] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"97fb2b4"}
+[2019-12-03 16:26:27] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"6d502d5"}
+[2019-12-03 16:28:15] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7f550f4"}
+[2019-12-03 16:28:15] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"7f550f4"}
+[2019-12-03 16:28:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ef7c3fe"}
+[2019-12-03 16:28:17] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"ef7c3fe"}
+[2019-12-03 16:28:19] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c63f2df"}
+[2019-12-03 16:28:19] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"c63f2df"}
+[2019-12-03 16:28:30] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"48233f5"}
+[2019-12-03 16:28:30] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"48233f5"}
+[2019-12-03 16:28:49] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"2bc7847"}
+[2019-12-03 16:29:15] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"5302b28"}
+[2019-12-03 16:29:15] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"5302b28"}
+[2019-12-03 16:36:37] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"0c74677"}
+[2019-12-03 16:36:37] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"0c74677"}
+[2019-12-03 16:38:46] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"964e0fb"}
+[2019-12-03 16:38:46] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"964e0fb"}
+[2019-12-03 16:39:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"583ce63"}
+[2019-12-03 16:39:05] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"583ce63"}
+[2019-12-03 16:45:16] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"13f0702"}
+[2019-12-03 16:45:16] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"13f0702"}
+[2019-12-03 16:45:40] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"95bc782"}
+[2019-12-03 16:45:40] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"95bc782"}
+[2019-12-03 16:47:23] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"6d8805f"}
+[2019-12-03 16:47:23] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"6d8805f"}
+[2019-12-03 16:48:22] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"5a4fdc4"}
+[2019-12-03 16:48:22] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"5a4fdc4"}
+[2019-12-03 16:49:41] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"b41caf2"}
+[2019-12-03 16:50:28] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"4ff92e1"}
+[2019-12-03 16:50:28] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"4ff92e1"}
+[2019-12-03 16:50:31] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"a948403"}
+[2019-12-03 16:50:31] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"a948403"}
+[2019-12-03 16:50:57] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"509b666"}
+[2019-12-03 16:50:57] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"509b666"}
+[2019-12-03 16:51:21] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"d048cf7"}
+[2019-12-03 16:51:21] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"d048cf7"}
+[2019-12-03 16:56:28] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"8fbca22"}
+[2019-12-03 16:59:08] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"88d4131"}
+[2019-12-03 17:06:43] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"01544b7"}
+[2019-12-03 17:06:49] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ab0b69d"}
+[2019-12-03 17:47:48] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"c82203e"}
+[2019-12-03 17:48:26] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c4588c5"}
+[2019-12-03 17:51:41] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"cf5b2eb"}
+[2019-12-03 17:51:41] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"cf5b2eb"}
+[2019-12-03 17:54:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7619711"}
+[2019-12-03 17:54:17] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"7619711"}
+[2019-12-03 17:55:30] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7955ace"}
+[2019-12-03 17:55:30] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"7955ace"}
+[2019-12-03 17:56:33] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"427fe04"}
+[2019-12-03 17:56:33] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"427fe04"}
+[2019-12-03 17:56:42] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b6111b3"}
+[2019-12-03 17:57:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b01e146"}
+[2019-12-03 17:57:42] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"77172c6"}
+[2019-12-03 17:58:26] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"e3cd387"}
+[2019-12-03 18:02:28] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b6670ef"}
+[2019-12-03 18:02:28] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"b6670ef"}
+[2019-12-03 18:03:54] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"5874ae5"}
+[2019-12-03 18:03:54] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"5874ae5"}
+[2019-12-03 18:05:38] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"d786c22"}
+[2019-12-03 18:05:38] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"d786c22"}
+[2019-12-03 18:06:06] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c21b5ae"}
+[2019-12-03 18:06:06] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"c21b5ae"}
+[2019-12-03 18:06:47] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"257bd35"}
+[2019-12-03 18:06:47] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"257bd35"}
+[2019-12-03 18:08:31] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"8443ce6"}
+[2019-12-03 18:08:31] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"8443ce6"}
+[2019-12-03 18:08:52] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"5ce6b30"}
+[2019-12-03 18:08:52] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"5ce6b30"}
+[2019-12-03 18:09:13] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b02f2da"}
+[2019-12-03 18:09:13] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"b02f2da"}
+[2019-12-03 18:09:52] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"38326ad"}
+[2019-12-03 18:09:52] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"38326ad"}
+[2019-12-03 18:09:58] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"5b5a732"}
+[2019-12-03 18:09:58] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"5b5a732"}
+[2019-12-03 18:10:20] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c39b43f"}
+[2019-12-03 18:10:20] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"c39b43f"}
+[2019-12-03 18:10:59] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"bcbcd47"}
+[2019-12-03 18:10:59] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"bcbcd47"}
+[2019-12-03 18:12:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"e429775"}
+[2019-12-03 18:12:05] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"e429775"}
+[2019-12-03 18:18:33] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"e94bebf"}
+[2019-12-03 18:18:33] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"e94bebf"}
+[2019-12-03 18:19:22] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"34bcb72"}
+[2019-12-03 18:19:22] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"34bcb72"}
+[2019-12-03 18:19:32] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"821365f"}
+[2019-12-03 18:19:32] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"821365f"}
+[2019-12-03 18:20:03] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"35104a9"}
+[2019-12-03 18:20:03] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"35104a9"}
+[2019-12-03 18:48:18] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"2ac5bd4"}
+[2019-12-03 18:50:11] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"d34af7e"}
+[2019-12-03 18:50:11] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"d34af7e"}
+[2019-12-03 18:50:57] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"8c092ae"}
+[2019-12-03 18:50:57] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"8c092ae"}
+[2019-12-03 18:51:41] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"d279ac2"}
+[2019-12-03 18:51:41] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"d279ac2"}
+[2019-12-03 18:54:45] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"683e946"}
+[2019-12-03 18:54:45] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"683e946"}
+[2019-12-03 19:03:25] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"6f7acaa"}
+[2019-12-03 19:03:25] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"6f7acaa"}
+[2019-12-03 19:05:01] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"88223aa"}
+[2019-12-03 19:05:01] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"88223aa"}
+[2019-12-03 19:07:51] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"2711ff8"}
+[2019-12-03 19:07:51] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"2711ff8"}
+[2019-12-03 19:08:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c52371a"}
+[2019-12-03 19:08:05] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"c52371a"}
+[2019-12-03 19:08:18] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"00664d3"}
+[2019-12-03 19:08:18] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"00664d3"}
+[2019-12-03 19:09:14] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"2f52c0b"}
+[2019-12-03 19:09:14] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"2f52c0b"}
+[2019-12-03 19:15:18] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"fa79051"}
+[2019-12-03 19:15:18] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"fa79051"}
+[2019-12-03 19:16:58] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"38ba87f"}
+[2019-12-03 19:16:58] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"38ba87f"}
+[2019-12-03 19:18:41] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"da622f9"}
+[2019-12-03 19:18:41] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"da622f9"}
+[2019-12-03 19:19:59] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"d5fe663"}
+[2019-12-03 19:19:59] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"d5fe663"}
+[2019-12-03 19:20:34] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"2bb34ce"}
+[2019-12-03 19:20:34] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"2bb34ce"}
+[2019-12-03 19:21:36] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"dfa9340"}
+[2019-12-03 19:21:36] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"dfa9340"}
+[2019-12-03 19:22:46] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"2a93e7c"}
+[2019-12-03 19:23:22] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"1b26130"}
+[2019-12-03 19:23:22] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"1b26130"}
+[2019-12-03 19:24:40] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ba10aa6"}
+[2019-12-03 19:24:40] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"ba10aa6"}
+[2019-12-03 19:26:28] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"d78e6dc"}
+[2019-12-03 19:26:38] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"0a40349"}
+[2019-12-03 19:26:53] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"f58b2d4"}
+[2019-12-03 19:26:53] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"f58b2d4"}
+[2019-12-03 19:28:10] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"4eb1114"}
+[2019-12-03 19:28:36] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"3693f94"}
+[2019-12-03 19:29:23] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"7a002b1"}
+[2019-12-03 19:29:50] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"f1970ec"}
+[2019-12-03 19:29:50] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"f1970ec"}
+[2019-12-03 19:30:24] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b48d056"}
+[2019-12-03 19:30:24] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"b48d056"}
+[2019-12-03 19:30:42] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"e355dc7"}
+[2019-12-03 19:30:49] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"1e8b555"}
+[2019-12-03 19:30:49] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"1e8b555"}
+[2019-12-03 19:31:13] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"e514653"}
+[2019-12-03 19:31:13] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"e514653"}
+[2019-12-03 19:31:30] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ea63eba"}
+[2019-12-03 19:31:30] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"ea63eba"}
+[2019-12-03 19:32:08] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"f0358d4"}
+[2019-12-03 19:32:08] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"f0358d4"}
+[2019-12-03 19:32:34] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"1341b67"}
+[2019-12-03 19:32:34] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"1341b67"}
+[2019-12-03 19:45:39] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"045f936"}
+[2019-12-03 19:45:39] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"045f936"}
+[2019-12-03 19:58:55] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"66683b1"}
+[2019-12-03 19:58:55] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"66683b1"}
+[2019-12-03 19:59:45] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"623ece8"}
+[2019-12-03 19:59:45] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"623ece8"}
+[2019-12-03 20:00:16] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"4292603"}
+[2019-12-03 20:00:16] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"4292603"}
+[2019-12-03 20:00:32] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"b553b27"}
+[2019-12-03 20:25:24] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"dae5a7b"}
+[2019-12-03 20:25:24] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"dae5a7b"}
+[2019-12-03 20:26:20] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"1b17acd"}
+[2019-12-03 20:26:20] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"1b17acd"}
+[2019-12-03 20:26:33] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c6a871b"}
+[2019-12-03 20:26:33] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"c6a871b"}
+[2019-12-03 20:26:36] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"4aa361e"}
+[2019-12-03 20:26:36] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"4aa361e"}
+[2019-12-03 20:26:40] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"e09b272"}
+[2019-12-03 20:26:40] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"e09b272"}
+[2019-12-03 20:26:56] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"4025f42"}
+[2019-12-03 20:26:56] VRE logger.ERROR: code:73 error:Invalid database name: '' [] {"uid":"4025f42"}
+[2019-12-03 20:26:59] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"fc52119"}
+[2019-12-03 20:26:59] VRE logger.ERROR: code:73 error:Invalid database name: '' [] {"uid":"fc52119"}
+[2019-12-03 20:27:52] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c819ad4"}
+[2019-12-03 20:27:52] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"c819ad4"}
+[2019-12-03 20:27:57] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"975a3c3"}
+[2019-12-03 20:27:57] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"975a3c3"}
+[2019-12-03 20:28:03] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"3e2442a"}
+[2019-12-03 20:28:03] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"3e2442a"}
+[2019-12-03 20:28:08] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"47a0fd9"}
+[2019-12-03 20:28:08] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"47a0fd9"}
+[2019-12-03 20:28:11] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"a3c58da"}
+[2019-12-03 20:28:11] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"a3c58da"}
+[2019-12-03 20:28:20] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"5638715"}
+[2019-12-03 20:28:20] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"5638715"}
+[2019-12-03 20:28:44] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ff592df"}
+[2019-12-03 20:28:44] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"ff592df"}
+[2019-12-03 20:30:24] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"fb547ce"}
+[2019-12-03 20:30:24] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"fb547ce"}
+[2019-12-03 20:30:57] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"54b58f4"}
+[2019-12-03 20:30:57] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"54b58f4"}
+[2019-12-03 20:31:29] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"4fcf99c"}
+[2019-12-03 20:31:29] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"4fcf99c"}
+[2019-12-03 20:34:13] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"e6d054b"}
+[2019-12-04 09:26:36] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"ff74319"}
+[2019-12-04 09:27:11] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"a83b6ed"}
+[2019-12-04 09:27:11] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"a83b6ed"}
+[2019-12-04 09:35:56] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"1d5dace"}
+[2019-12-04 09:35:56] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"1d5dace"}
+[2019-12-04 09:36:58] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"644bcce"}
+[2019-12-04 09:37:25] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"3d764da"}
+[2019-12-04 09:37:25] VRE logger.ERROR: code:11 error:Authentication failed. [] {"uid":"3d764da"}
+[2019-12-04 09:37:38] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"2d82b57"}
+[2019-12-04 09:37:38] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"2d82b57"}
+[2019-12-04 10:03:30] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"00a4fc8"}
+[2019-12-04 10:03:30] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"00a4fc8"}
+[2019-12-04 10:03:34] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"0af4ad3"}
+[2019-12-04 10:03:34] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"0af4ad3"}
+[2019-12-04 10:04:00] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b2c79b6"}
+[2019-12-04 10:04:00] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"b2c79b6"}
+[2019-12-04 10:56:40] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"d734ef8"}
+[2019-12-04 10:57:29] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"6fd51e2"}
+[2019-12-04 10:57:29] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"6fd51e2"}
+[2019-12-04 11:00:03] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"9a6f59e"}
+[2019-12-04 11:00:03] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"9a6f59e"}
+[2019-12-04 11:03:33] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"8c82cf5"}
+[2019-12-04 11:03:33] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"8c82cf5"}
+[2019-12-04 11:05:21] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"6392c94"}
+[2019-12-04 11:05:21] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"6392c94"}
+[2019-12-04 11:07:06] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"d4511c6"}
+[2019-12-04 11:07:06] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"d4511c6"}
+[2019-12-04 11:07:28] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"2977774"}
+[2019-12-04 11:07:53] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"fe64e30"}
+[2019-12-04 11:08:48] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"60ee844"}
+[2019-12-04 11:08:48] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"60ee844"}
+[2019-12-04 11:08:59] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"53f2b8c"}
+[2019-12-04 11:08:59] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"53f2b8c"}
+[2019-12-04 11:09:14] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b9e69f9"}
+[2019-12-04 11:09:14] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"b9e69f9"}
+[2019-12-04 11:10:14] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"f003a6f"}
+[2019-12-04 11:11:14] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"d5edb33"}
+[2019-12-04 11:11:29] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"5beffd2"}
+[2019-12-04 11:11:29] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"5beffd2"}
+[2019-12-04 11:11:58] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"a3a25bd"}
+[2019-12-04 11:11:58] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"a3a25bd"}
+[2019-12-04 11:12:00] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b9974c3"}
+[2019-12-04 11:12:00] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"b9974c3"}
+[2019-12-04 11:12:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"2965693"}
+[2019-12-04 11:12:05] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"2965693"}
+[2019-12-04 11:12:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"af8db87"}
+[2019-12-04 11:12:17] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"af8db87"}
+[2019-12-04 11:12:34] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"4633576"}
+[2019-12-04 11:12:34] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"4633576"}
+[2019-12-04 11:12:44] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"e0bafb1"}
+[2019-12-04 11:12:44] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"e0bafb1"}
+[2019-12-04 11:16:11] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7ae1c52"}
+[2019-12-04 11:16:11] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"7ae1c52"}
+[2019-12-04 11:16:36] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"0f8ec18"}
+[2019-12-04 11:16:36] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"0f8ec18"}
+[2019-12-04 11:19:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"20b2342"}
+[2019-12-04 11:19:05] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"20b2342"}
+[2019-12-04 11:19:29] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"d26cc85"}
+[2019-12-04 11:19:29] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"d26cc85"}
+[2019-12-04 11:19:54] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7720a88"}
+[2019-12-04 11:19:54] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"7720a88"}
+[2019-12-04 11:20:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"f2ec56a"}
+[2019-12-04 11:20:17] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"f2ec56a"}
+[2019-12-04 11:20:35] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"8e8b145"}
+[2019-12-04 11:20:35] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"8e8b145"}
+[2019-12-04 11:21:00] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"780215d"}
+[2019-12-04 11:21:00] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"780215d"}
+[2019-12-04 11:23:11] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"597cb65"}
+[2019-12-04 11:23:11] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"597cb65"}
+[2019-12-04 11:29:14] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"64cdb02"}
+[2019-12-04 11:30:15] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"970efa1"}
+[2019-12-04 11:30:15] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"970efa1"}
+[2019-12-04 11:30:27] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"0b63a8c"}
+[2019-12-04 11:30:27] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"0b63a8c"}
+[2019-12-04 11:37:01] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"19fbcec"}
+[2019-12-04 11:38:18] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"50f6bf8"}
+[2019-12-04 11:39:00] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"dbe52d6"}
+[2019-12-04 11:39:00] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"dbe52d6"}
+[2019-12-04 11:39:08] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7a021e3"}
+[2019-12-04 11:39:08] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"7a021e3"}
+[2019-12-04 11:39:27] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ab56f45"}
+[2019-12-04 11:39:27] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"ab56f45"}
+[2019-12-04 11:39:58] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"cdc88a3"}
+[2019-12-04 11:39:58] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"cdc88a3"}
+[2019-12-04 11:40:31] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"a74d53c"}
+[2019-12-04 11:40:31] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"a74d53c"}
+[2019-12-04 11:42:59] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"33cb001"}
+[2019-12-04 11:42:59] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"33cb001"}
+[2019-12-04 11:43:42] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"cb8b54a"}
+[2019-12-04 11:43:42] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"cb8b54a"}
+[2019-12-04 11:58:47] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"9a25d37"}
+[2019-12-04 11:58:47] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"9a25d37"}
+[2019-12-04 11:59:39] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"aac8bc7"}
+[2019-12-04 11:59:39] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"aac8bc7"}
+[2019-12-04 12:00:57] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"884e90e"}
+[2019-12-04 12:00:57] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"884e90e"}
+[2019-12-04 12:01:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"dfd05ef"}
+[2019-12-04 12:01:17] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"dfd05ef"}
+[2019-12-04 12:01:39] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"2e3594b"}
+[2019-12-04 12:01:39] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"2e3594b"}
+[2019-12-04 12:02:16] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"f02be3e"}
+[2019-12-04 12:02:51] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ad5cdea"}
+[2019-12-04 12:02:51] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"ad5cdea"}
+[2019-12-04 12:03:27] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"8047358"}
+[2019-12-04 12:03:27] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://user01:eushvre01@10.32.7.200:27017?authSource=eucanshare_vre'. Invalid host string in URI. [] {"uid":"8047358"}
+[2019-12-04 12:05:09] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b170fe6"}
+[2019-12-04 12:05:09] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://Admin:bsccns@10.32.7.200:27017?authSource=admin'. Invalid host string in URI. [] {"uid":"b170fe6"}
+[2019-12-04 12:06:20] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ffa2865"}
+[2019-12-04 12:06:20] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://Admin:bsccns@10.32.7.200:27017?authSource=admin'. Invalid host string in URI. [] {"uid":"ffa2865"}
+[2019-12-04 12:06:32] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7d94db8"}
+[2019-12-04 12:06:32] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"7d94db8"}
+[2019-12-04 12:14:31] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"8cba9a7"}
+[2019-12-04 12:14:31] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://Admin:bsccns@10.32.7.200:27017?authSource=admin'. Invalid host string in URI. [] {"uid":"8cba9a7"}
+[2019-12-04 12:14:55] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"0c03a81"}
+[2019-12-04 12:14:55] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"0c03a81"}
+[2019-12-04 12:17:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"f758de6"}
+[2019-12-04 12:17:17] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"f758de6"}
+[2019-12-04 12:18:15] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"bad3f19"}
+[2019-12-04 12:18:15] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"bad3f19"}
+[2019-12-04 12:18:31] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"a66fe14"}
+[2019-12-04 12:18:31] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"a66fe14"}
+[2019-12-04 12:21:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"9f198e5"}
+[2019-12-04 12:21:17] VRE logger.ERROR: code:0 error:Failed to parse MongoDB URI: 'mongodb://Admin:bsccns@10.32.7.200:27017?authSource=admin'. Invalid host string in URI. [] {"uid":"9f198e5"}
+[2019-12-04 12:25:37] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"0f14cea"}
+[2019-12-04 12:25:37] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"0f14cea"}
+[2019-12-04 12:26:27] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b9c5613"}
+[2019-12-04 12:26:27] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"b9c5613"}
+[2019-12-04 12:27:09] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"377add7"}
+[2019-12-04 12:27:09] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"377add7"}
+[2019-12-04 12:28:58] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"682e9ad"}
+[2019-12-04 12:28:58] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"682e9ad"}
+[2019-12-04 12:38:21] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"e19c95c"}
+[2019-12-04 12:38:42] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"82d0d8d"}
+[2019-12-04 12:39:13] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"336d958"}
+[2019-12-04 12:39:13] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"336d958"}
+[2019-12-04 12:47:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"e227c17"}
+[2019-12-04 12:47:17] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"e227c17"}
+[2019-12-04 12:47:41] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ec0f4f7"}
+[2019-12-04 12:47:41] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"ec0f4f7"}
+[2019-12-04 13:01:10] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"9f74d4c"}
+[2019-12-04 13:01:10] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"9f74d4c"}
+[2019-12-04 13:03:36] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"f1dbc83"}
+[2019-12-04 13:03:36] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"f1dbc83"}
+[2019-12-04 13:16:44] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"5f04cf9"}
+[2019-12-04 13:17:22] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"3859519"}
+[2019-12-04 13:17:22] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"3859519"}
+[2019-12-04 14:48:14] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"9540f8c"}
+[2019-12-04 14:48:54] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"56806de"}
+[2019-12-04 14:48:54] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"56806de"}
+[2019-12-04 14:49:23] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"f23842a"}
+[2019-12-04 14:49:23] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"f23842a"}
+[2019-12-04 14:49:26] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b8bafa3"}
+[2019-12-04 14:49:26] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"b8bafa3"}
+[2019-12-04 14:49:34] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"d092a3c"}
+[2019-12-04 14:49:35] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"d092a3c"}
+[2019-12-04 17:03:03] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"1ebe81e"}
+[2019-12-04 17:03:37] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ffcd548"}
+[2019-12-04 17:03:37] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"ffcd548"}
+[2019-12-04 17:19:54] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7091527"}
+[2019-12-04 17:19:54] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"7091527"}
+[2019-12-04 17:20:12] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b53ecdc"}
+[2019-12-04 17:20:12] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"b53ecdc"}
+[2019-12-04 17:20:28] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"60aa968"}
+[2019-12-04 17:20:28] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"60aa968"}
+[2019-12-04 17:20:44] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ac476a7"}
+[2019-12-04 17:20:44] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"ac476a7"}
+[2019-12-04 17:20:50] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"220f9b7"}
+[2019-12-04 17:20:50] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"220f9b7"}
+[2019-12-04 17:21:03] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b077291"}
+[2019-12-04 17:21:03] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"b077291"}
+[2019-12-04 17:23:39] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"777d897"}
+[2019-12-04 17:23:39] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"777d897"}
+[2019-12-04 17:24:02] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"fc73ab8"}
+[2019-12-04 17:24:02] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"fc73ab8"}
+[2019-12-04 17:24:08] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"bcda150"}
+[2019-12-04 17:24:08] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"bcda150"}
+[2019-12-04 17:33:59] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"66efb8c"}
+[2019-12-04 17:33:59] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"66efb8c"}
+[2019-12-04 17:34:26] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"eabf503"}
+[2019-12-04 17:34:26] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"eabf503"}
+[2019-12-04 17:35:01] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ef41505"}
+[2019-12-04 17:35:01] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"ef41505"}
+[2019-12-04 17:35:10] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7cb2323"}
+[2019-12-04 17:35:10] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"7cb2323"}
+[2019-12-04 17:35:30] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"41291ba"}
+[2019-12-04 17:36:11] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"5fa97ca"}
+[2019-12-04 17:36:11] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"5fa97ca"}
+[2019-12-04 17:37:34] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"54ddb7c"}
+[2019-12-04 17:37:34] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"54ddb7c"}
+[2019-12-04 17:37:48] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"60400c0"}
+[2019-12-04 17:37:48] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"60400c0"}
+[2019-12-04 17:39:29] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c59a184"}
+[2019-12-04 17:39:29] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"c59a184"}
+[2019-12-04 17:42:01] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c5cf73c"}
+[2019-12-04 17:42:01] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"c5cf73c"}
+[2019-12-04 17:44:45] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"3b4ea2c"}
+[2019-12-04 17:50:12] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"22e21e5"}
+[2019-12-04 17:50:15] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b86b6a6"}
+[2019-12-04 17:58:33] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"dfe4a99"}
+[2019-12-04 18:00:13] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"62c6277"}
+[2019-12-04 18:01:08] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c4a6551"}
+[2019-12-04 18:01:42] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"21aae6b"}
+[2019-12-04 18:01:48] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"02d1471"}
+[2019-12-04 18:02:33] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"049d6ce"}
+[2019-12-04 18:08:27] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"f64af25"}
+[2019-12-04 18:08:57] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"8fa4cc0"}
+[2019-12-04 18:29:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"f49b09b"}
+[2019-12-04 18:31:39] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b35cae8"}
+[2019-12-04 18:34:14] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"bd68014"}
+[2019-12-04 18:34:22] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"b13a0e3"}
+[2019-12-04 18:52:26] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"dcc460a"}
+[2019-12-04 18:52:56] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"9dead2f"}
+[2019-12-04 18:55:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"86df66a"}
+[2019-12-09 10:37:24] VRE logger.ERROR: code:503 error:Authorization server returns: Service Unavailable [] {"uid":"c49ed7e"}
+[2019-12-09 10:41:38] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"2ed2da2"}
+[2019-12-09 10:42:34] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"1efab0c"}
+[2019-12-09 10:43:25] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"665257a"}
+[2019-12-09 10:46:38] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"7013199"}
+[2019-12-09 10:47:41] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"8874f49"}
+[2019-12-09 10:49:25] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"940549c"}
+[2019-12-09 10:50:41] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"92cf0f7"}
+[2019-12-09 10:51:18] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"8f60f62"}
+[2019-12-09 10:59:14] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"adf8dee"}
+[2019-12-09 10:59:45] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c667ce4"}
+[2019-12-09 10:59:48] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c747de2"}
+[2019-12-09 11:00:31] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"bcb592b"}
+[2019-12-09 11:00:33] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"a774c2e"}
+[2019-12-09 11:00:54] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"e602ced"}
+[2019-12-09 11:01:14] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"5c9c232"}
+[2019-12-09 11:02:22] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"9879f42"}
+[2019-12-09 11:02:22] VRE logger.ERROR: code:401 error:User EUSHUSER5dcc2e5102c08 does not exist for EuCanSHare_VRE; [] {"uid":"9879f42"}
+[2019-12-09 11:03:28] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"1d8edf6"}
+[2019-12-09 11:04:17] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"60510b4"}
+[2019-12-09 11:04:17] VRE logger.ERROR: code:401 error:User EUSHUSER5dcc2e5102c08 does not exist for EuCanSHare_VRE; [] {"uid":"60510b4"}
+[2019-12-09 11:04:46] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"ba86ab8"}
+[2019-12-09 11:04:46] VRE logger.ERROR: code:401 error:User EUSHUSER5dcc2e5102c08 does not exist for EuCanSHare_VRE; [] {"uid":"ba86ab8"}
+[2019-12-09 11:05:10] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"61a260c"}
+[2019-12-09 11:05:10] VRE logger.ERROR: code:401 error:User EUSHUSER5dcc2e5102c08 does not exist for EuCanSHare_VRE; [] {"uid":"61a260c"}
+[2019-12-09 11:48:07] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"e45ad32"}
+[2019-12-09 11:49:45] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c034fc2"}
+[2019-12-09 11:49:45] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"c034fc2"}
+[2019-12-09 11:50:04] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"0c95fba"}
+[2019-12-09 11:50:04] VRE logger.ERROR: code:401 error:User test does not exist for EuCanSHare_VRE; [] {"uid":"0c95fba"}
+[2019-12-09 13:00:45] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"742f4a5"}
+[2019-12-09 13:01:49] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"33a49d9"}
+[2019-12-09 13:03:41] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"d6c4a39"}
+[2019-12-09 13:05:46] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"958d0ec"}
+[2019-12-09 13:05:55] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"88f8f92"}
+[2019-12-09 13:07:08] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"43c4622"}
+[2019-12-09 13:08:47] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"2e80f4a"}
+[2019-12-09 13:11:24] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"c54774d"}
+[2019-12-09 14:20:35] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"17ee574"}
+[2019-12-09 14:28:56] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"0eed86d"}
+[2019-12-09 14:29:16] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"1a5a7fe"}
+[2019-12-09 14:30:44] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"3ec8897"}
+[2019-12-09 15:24:03] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"43949d9"}
+[2019-12-09 15:24:51] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/EUSHUSER5dcc2e5102c08_5dcc2e51184557.26632864' [] {"uid":"f25dac6"}
+[2019-12-09 15:48:47] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/EUSHUSER5dcc2e5102c08_5dcc2e51184557.26632864' [] {"uid":"37207c4"}
+[2019-12-09 15:49:00] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"3ad7c0f"}
+[2019-12-09 16:35:29] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"6572fc5"}
+[2019-12-09 16:35:29] VRE logger.ERROR: code:401 error:User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md; Repository=EuCanSHare_VRE; [] {"uid":"6572fc5"}
+[2019-12-09 16:37:28] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"f70b895"}
+[2019-12-09 16:37:51] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"520e765"}
+[2019-12-09 16:38:46] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"d935834"}
+[2019-12-09 16:38:46] VRE logger.ERROR: code:401 error:User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md; Repository=EuCanSHare_VRE; [] {"uid":"d935834"}
+[2019-12-09 16:39:05] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"4def8bd"}
+[2019-12-09 16:40:13] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"83475ac"}
+[2019-12-09 16:41:13] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"97e16e1"}
+[2019-12-09 16:42:37] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"4315055"}
+[2019-12-09 16:44:35] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/EUSHUSER5dcc2e5102c08_5dcc2e51184557.26632864' [] {"uid":"5081eff"}
+[2019-12-09 17:15:52] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"5f0dee8"}
+[2019-12-09 17:16:24] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"c55e0c3"}
+[2019-12-09 17:17:24] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/EUSHUSER5dcc2e5102c08_5dcc2e51184557.26632864' [] {"uid":"bdaaeb5"}
+[2019-12-09 17:21:52] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"198d42b"}
+[2019-12-09 17:22:10] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/EUSHUSER5dcc2e5102c08_5de523c50c5b38.48296047' [] {"uid":"3679199"}
+[2019-12-09 17:23:39] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/ESHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"e06e4a0"}
+[2019-12-09 17:23:39] VRE logger.ERROR: code:401 error:User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=ESHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md; Repository=EuCanSHare_VRE; [] {"uid":"e06e4a0"}
+[2019-12-09 17:24:12] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/ESHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"1cc7c09"}
+[2019-12-09 17:24:12] VRE logger.ERROR: code:401 error:User test (EUSHUSER5dcc2e5102c08) not allowed to access file. Id=ESHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md; Repository=EuCanSHare_VRE; [] {"uid":"1cc7c09"}
+[2019-12-09 17:24:47] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/data/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"37c4eca"}
+[2019-12-09 17:25:21] VRE logger.INFO: 127.0.0.1 |  -- 'GET /' [] {"uid":"1d72448"}
+[2019-12-09 17:25:21] VRE logger.INFO: EUSH-vre: Visiting '/home' route [] {"uid":"1d72448"}
+[2019-12-09 17:25:36] VRE logger.ERROR: code:0 error:The "/var/www/html/VRE_data_api/app" directory does not exist. [] {"uid":"4e00c4f"}
+[2019-12-09 17:25:59] VRE logger.ERROR: code:0 error:The "/var/www/html/VRE_data_api/app" directory does not exist. [] {"uid":"571bd0b"}
+[2019-12-09 17:27:07] VRE logger.ERROR: code:0 error:The "/VRE_data_api/app" directory does not exist. [] {"uid":"3e4263e"}
+[2019-12-09 17:27:36] VRE logger.ERROR: code:0 error:The "/VRE_data_api/app" directory does not exist. [] {"uid":"a970a62"}
+[2019-12-09 17:29:23] VRE logger.ERROR: code:0 error:The "VRE_data_api/app" directory does not exist. [] {"uid":"6fb3462"}
+[2019-12-09 17:30:27] VRE logger.ERROR: code:0 error:The "VRE_data_api/public/docs" directory does not exist. [] {"uid":"a71eb0a"}
+[2019-12-09 17:30:34] VRE logger.ERROR: code:0 error:The "/VRE_data_api/public/docs" directory does not exist. [] {"uid":"2e9f127"}
+[2019-12-09 17:30:46] VRE logger.ERROR: code:0 error:The "/var/www/html/VRE_data_api/public/docs" directory does not exist. [] {"uid":"b2933d3"}
+[2019-12-09 17:32:44] VRE logger.ERROR: code:0 error:The "/VRE_data_api/public/docs" directory does not exist. [] {"uid":"b172264"}
+[2019-12-09 17:32:51] VRE logger.ERROR: code:0 error:The "/VRE_data_api/public/docs" directory does not exist. [] {"uid":"6d6068e"}
+[2019-12-09 17:33:11] VRE logger.ERROR: code:0 error:The "/VRE_data_api/app" directory does not exist. [] {"uid":"ac5c092"}
+[2019-12-09 17:33:30] VRE logger.ERROR: code:0 error:The "/VRE_data_api/public" directory does not exist. [] {"uid":"d76d3f8"}
+[2019-12-09 17:37:27] VRE logger.ERROR: code:0 error:The "/var/www/html/VRE_data_api/public" directory does not exist. [] {"uid":"874f4e5"}
+[2019-12-09 17:38:51] VRE logger.ERROR: code:0 error:The "/VRE_data_api/app" directory does not exist. [] {"uid":"846e75a"}
+[2019-12-09 17:39:03] VRE logger.ERROR: code:0 error:The "/VRE_data_api/app/" directory does not exist. [] {"uid":"9d90fa4"}
+[2019-12-09 18:01:10] VRE logger.ERROR: code:0 error:The "/var/www/html/VRE_data_api/app/" directory does not exist. [] {"uid":"0dd16ae"}
+[2019-12-09 18:01:43] VRE logger.ERROR: code:0 error:The "/VRE_data_api/public/" directory does not exist. [] {"uid":"6430a42"}
+[2019-12-09 18:02:41] VRE logger.ERROR: code:0 error:The "/VRE_data_api/public/" directory does not exist. [] {"uid":"b342541"}
+[2019-12-09 19:01:48] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"30911c1"}
+[2019-12-09 19:02:16] VRE logger.ERROR: code:0 error:The "/var/www/html/VRE_data_api/app" directory does not exist. [] {"uid":"c73e564"}
+[2019-12-10 13:19:33] VRE logger.ERROR: code:0 error:The "/home/user/VRE_data_api/app/VRE_data_api/app" directory does not exist. [] {"uid":"c739d16"}
+[2019-12-10 13:19:42] VRE logger.ERROR: code:0 error:The "/home/user/VRE_data_api/app/VRE_data_api/app" directory does not exist. [] {"uid":"6547e08"}
+[2019-12-10 14:25:53] VRE logger.ERROR: code:0 error:Unexpected $directory value:object [] {"uid":"d9112cd"}
+[2019-12-10 19:00:51] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"7cb587e"}
+[2019-12-10 19:02:03] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/files/EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md' [] {"uid":"3667f8d"}
+[2019-12-10 19:23:40] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"115e6c6"}
+[2019-12-10 19:35:35] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"5740d8f"}
+[2019-12-10 19:35:50] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"87e83f3"}
+[2019-12-10 19:55:59] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/EUSHUSER5dcc2e5102c08_5dcc2e51184557.26632864' [] {"uid":"fa75bac"}
