@@ -2363,3 +2363,5 @@
 [2019-12-10 19:35:35] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"5740d8f"}
 [2019-12-10 19:35:50] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata' [] {"uid":"87e83f3"}
 [2019-12-10 19:55:59] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/EUSHUSER5dcc2e5102c08_5dcc2e51184557.26632864' [] {"uid":"fa75bac"}
+[2019-12-11 19:05:32] VRE logger.ERROR: code:401 error:Authorization server returns: Unauthorized [] {"uid":"0c9f103"}
+[2019-12-11 19:05:56] VRE logger.INFO: 127.0.0.1 |  -- 'GET /v1/metadata/EUSHUSER5dcc2e5102c08_5dcc2e51184557.26632864' [] {"uid":"0ef7faf"}
