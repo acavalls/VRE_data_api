@@ -34,7 +34,7 @@ class TokenVerify extends Middleware
 		}
 		$request = $request->withAttribute('vre_id', $vre_id);
 
-		// We might get rid of this claim in the token structure in the next future. 
+		// We might get rid of this token claim in the future. 
 		$userLogin = $this->oauth2->getAttrFromTokenResponse("username", $r);
 		if (empty($userLogin)) {
 			$code = 406;
