@@ -1,2 +1,2 @@
-vendor
-/app/settings.php.sample
+/vendor
+/app/settings.php
