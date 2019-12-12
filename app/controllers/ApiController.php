@@ -4,6 +4,10 @@ namespace App\Controllers;
 
 use \App\Models\Mugfile as Mugfile;
 
+#require_once ( __DIR__ . '/../models/Utilities.php' );
+#require_once ( __DIR__ . '/Controller.php' );
+
+
 class ApiController extends Controller {
 
     /**
@@ -51,20 +55,49 @@ class ApiController extends Controller {
      * )
      **/
 
+    /*          OLD VERSION -> MONGODB USEREXISTS QUERY WITH USERNAME INSTEAD OF VRE_ID.
+
 	public function get_files($request, $response, $args) {
 
         $userLogin = $request->getAttribute('userLogin');
 
         $filters = $request->getQueryParams(); #sort,fields,page,offset,..
-        if($filters['limit'] && is_integer((int)$filters['limit']) )
+
+        if($filters['limit'] && is_integer((int)$filters['limit'])) {
             $limit=(int)$filters['limit'];
-        if($filters['sort_by'])
+        }
+
+        if($filters['sort_by']) {
             $sort_by=$filters['sort_by'];
+        }
+
         $files = $this->mugfile->getFiles($userLogin,$limit,$sort_by);
 
-		echo json_encode($files,JSON_PRETTY_PRINT);
+        echo json_encode($files,JSON_PRETTY_PRINT);
+        
+    }
+    */
 
-	}
+    public function get_files($request, $response, $args) {
+
+        $vre_id = $request->getAttribute('vre_id');
+
+        $filters = $request->getQueryParams(); #sort,fields,page,offset,..
+
+        if($filters['limit'] && is_integer((int)$filters['limit'])) {
+            $limit=(int)$filters['limit'];
+        }
+
+        if($filters['sort_by']) {
+            $sort_by=$filters['sort_by'];
+        }
+
+        $files = $this->mugfile->getFiles($vre_id,$limit,$sort_by);
+
+        echo json_encode($files,JSON_PRETTY_PRINT);
+        
+    }
+
 
     /**
      * @SWG\Get(
@@ -110,26 +143,29 @@ class ApiController extends Controller {
      *     deprecated=false
      * )
      **/
-
     
 	public function get_files_by_id($request, $response, $args) {
 
 		$id        = $args['file_id'];
-        $userLogin = $request->getAttribute('userLogin');
+        $vre_id = $request->getAttribute('vre_id');
 
         if ($id){
-				
-			//$file = new Mugfile($this->container);
-			//$file->getFile($id,$userLogin);
-            $file = $this->mugfile->getFile($id,$userLogin);
-		
+
+            // Here we either check if the selected dataset ID is present in MongoDB, and if the logged user exists in the DB.
+            
+            $file = $this->mugfile->getFile($id,$vre_id);
+        
+            // If the file doesn't exists...
+
 			if (!$file->file_id){
 				$code = 404;
                 $errMsg = "Resource not found. Id=$id; Repository=".$this->global['local_repository'].";";
-                if ($userLogin)
-                    $errMsg .= " Login=$userLogin;";
+                if ($vre_id)
+                    $errMsg .= " Login=$vre_id;";
 				throw new \Exception($errMsg, $code); 
-			}
+            }
+            
+            // If the file exists, just print the metadata in JSON format. 
 	
 			echo json_encode($file,JSON_PRETTY_PRINT);
 		
@@ -184,81 +220,83 @@ class ApiController extends Controller {
      * )
      **/
 
-    public function get_content_by_path($request, $response, $args) {
-
+    public function get_content_by_path($request, $response, $args)
+    {
         $file_path = $request->getAttribute('file_path');  // path as returned by DM API (relative to user root dir)
+        $vre_id    = $request->getAttribute('vre_id');     // vre_id used to verify that token owner is resource onwner
+        $userLogin = $request->getAttribute('userLogin');  // user mail used to get vre_id via internal VRE db. //USABILITY RESTRICTED TO DB ACCESSIBILITY
 
-        $mug_id    = $request->getAttribute('mug_id');     // mug_id used to verify that token owner is resource onwner
-        $userLogin = $request->getAttribute('userLogin');  // user mail used to get mug_id via internal VRE db. //USABILITY RESTRICTED TO DB ACCESSIBILITY
+        #$filters   = $request->getQueryParams(); #sort,fields,page,offset,.. //TODO
 
-        $filters   = $request->getQueryParams(); #sort,fields,page,offset,.. //TODO
-        
-        if ($file_path){
+        if ($file_path) {
             $path = explode('/', $file_path);
 
-            if (!count($path) || in_array("..",$path) || in_array(".",$path) ){
-				$code = 400;
-                $errMsg = "Invalid file path. Id=$file_path; Repository=".$this->global['local_repository'].";";
+            if (!count($path) || in_array("..", $path) || in_array(".", $path)) {
+                $code = 400;
+                $errMsg = "Invalid file path. Id=$file_path; Repository=" . $this->global['local_repository'] . ";";
                 if ($userLogin)
                     $errMsg .= " Login=$userLogin;";
-				throw new \Exception($errMsg, $code); 
+                throw new \Exception($errMsg, $code);
             }
+
             $user_rootDir = $path[0];
-    
+
             // Check resource owner
-            if (!$mug_id && $userLogin){
-               if (!$this->user->userExists($userLogin)){
+
+            if ($vre_id) {
+
+                if (!$this->user->userExists($vre_id)) {
                     $code = 401;
-                    $errMsg = "User $userLogin does not exist. Id=$file_path; Repository=".$this->global['local_repository'].";";
-                    throw new \Exception($errMsg, $code);
-               }
-               $user = $this->user->getUser($userLogin);
-               $mug_id = $user->id;
-            }
-            if ($mug_id){
-                if ($user_rootDir != $mug_id){
-                    $code = 401;
-                    $errMsg = "User $userLogin ($mug_id) not allowed to access file. Id=$file_path; Repository=".$this->global['local_repository'].";";
+                    $errMsg = "User $vre_id does not exist. Id=$file_path; Repository=" . $this->global['local_repository'] . ";";
                     throw new \Exception($errMsg, $code);
                 }
-            }else{
+                else if ($user_rootDir != $vre_id) {
+                    $code = 401;
+                    $errMsg = "User $vre_id not allowed to access file. Id=$file_path; Repository=" . $this->global['local_repository'] . ";";
+                    throw new \Exception($errMsg, $code);
+                }
+                else {
+                    $user = $this->user->getUser($vre_id);
+                    $vre_id = $user->id;
+                }
+
+            }
+            else {
                 $code = 401;
-                $errMsg = "No resource owner information. Id=$file_path; Repository=".$this->global['local_repository'].";";
+                $errMsg = "No resource owner information. Id=$file_path; Repository=" . $this->global['local_repository'] . ";";
                 throw new \Exception($errMsg, $code);
             }
 
-			// Get full path
-			$rfn = $this->global['dataDir'].$file_path;
-
+            // Get full path
+            $rfn = $this->global['dataDir'] . $file_path;
+            
             // Return file
-            if (is_file($rfn)){
-    			$fileExtension = $this->utils->getExtension($rfn);
-    			$mimeTypes     = $this->utils->mimeTypes();
-    			$contentType = (array_key_exists($fileExtension, $mimeTypes)?$mimeTypes[$fileExtension]:"text/plain");
-    			$disposition  = "attachment"; // attachment | inline
+            if (is_file($rfn)) {
+                $fileExtension = $this->utils->getExtension($rfn);
+                $mimeTypes     = $this->utils->mimeTypes();
+                $contentType = (array_key_exists($fileExtension, $mimeTypes) ? $mimeTypes[$fileExtension] : "text/plain");
+                $disposition  = "attachment"; // attachment | inline
 
                 readfile($rfn);
-    			$response = $response->withHeader('Content-Type', 'text/plain');
+                $response = $response->withHeader('Content-Type', 'text/plain');
             }
             // Return directory
-            elseif(is_dir($rfn)){
+            elseif (is_dir($rfn)) {
                 print scandir($rfn);
-            }
-            else{
-				$code = 422;
-				$errMsg = "Resource not available. Id=$file_path; Repository=".$this->global['local_repository']."; File_path=".$rfn.";";
-		    	$this->logger->error("code $code: error: $errMsg");
+            } else {
+                $code = 422;
+                $errMsg = "Resource not available. Id=$file_path; Repository=" . $this->global['local_repository'] . "; File_path=" . $rfn . ";";
+                $this->logger->error("code $code: error: $errMsg");
                 throw new \Exception($errMsg, $code);
-				//$response = $response->withStatus($code);
-				//$response = $response->withHeader('Content-Type','application/json');
-				//$response = $response->withJson(['error' => $errMsg,'code'   => $code]);
-				//return $response;
-				
+                //$response = $response->withStatus($code);
+                //$response = $response->withHeader('Content-Type','application/json');
+                //$response = $response->withJson(['error' => $errMsg,'code'   => $code]);
+                //return $response;
             }
         }
+
 		return $response;
     }
-
 
 	public function get_content_by_id($request, $response, $args) {
 

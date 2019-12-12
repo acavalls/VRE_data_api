@@ -11,9 +11,9 @@ class DB {
 	}
 
 	public function getDocuments($collection, $filter, $options) {
-		
+
 		$query = new \MongoDB\Driver\Query($filter, $options);
-	
+
 		$doc = $this->mng->executeQuery($this->database.".".$collection, $query);
 
 		return $doc->toArray();
@@ -24,7 +24,7 @@ class DB {
 	
 		$bulk = new \MongoDB\Driver\BulkWrite;
     
-    $bulk->insert($doc);
+    	$bulk->insert($doc);
 
 		$this->mng->executeBulkWrite($this->database.".".$collection, $bulk);
 
