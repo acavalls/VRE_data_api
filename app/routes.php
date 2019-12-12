@@ -11,7 +11,7 @@ use App\Middleware\GuestMiddleware;*/
 $app->get('/', 'staticPages:home');
 
 // Documentation entry point.
-$app->get('/swagger.json', function($request, $response, $args) {
+$app->get('/doc', function($request, $response, $args) {
     $swagger = \Swagger\scan([__DIR__]);
     header('Content-Type: application/json');
     echo $swagger;
@@ -20,12 +20,6 @@ $app->get('/swagger.json', function($request, $response, $args) {
 // Versioning group
 
 $app->group('/v1', function() use ($container) {
-
-    $this->get('/doc', function($request, $response, $args) {
-            $swagger = \Swagger\scan([__DIR__]);
-            header('Content-Type: application/json');
-            echo $swagger;
-    });
 
     // Files: get file.
     $this->group('/files', function() use ($container) {

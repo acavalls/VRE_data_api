@@ -12,6 +12,10 @@ $container = $app->getContainer();
 // monolog
 $container['logger'] = function ($c) {
 	$settings = $c->get('settings')['logger'];
+	if (!file_exists($settings['path'])){
+		$F = fopen($settings['path'], 'w') or die("Cannot create log file at ".$settings['path'].". Please, check the write permissions");
+		fclose($F);
+	}
 	$logger = new Monolog\Logger($settings['name']);
 	$logger->pushProcessor(new Monolog\Processor\UidProcessor());
 	$logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
