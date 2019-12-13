@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use \App\Models\Mugfile as Mugfile;
+use \App\Models\VREfile as VREfile;
 
 #require_once ( __DIR__ . '/../models/Utilities.php' );
 #require_once ( __DIR__ . '/Controller.php' );
@@ -12,16 +12,16 @@ class ApiController extends Controller {
 
     /**
      * @SWG\Get(
-     *     path="/files",
+     *     path="/metadata",
      *     summary="List user files",
-     *     tags={"files"},
-     *     description="List MuG files accessible by the user. Result can be filtered and sorted",
-     *     operationId="showUserMugfiles",
+     *     tags={"metadata"},
+     *     description="List VRE files accessible by the user. Result can be filtered and sorted",
+     *     operationId="showUserVREfiles",
      *     produces={"application/json"},
      *     @SWG\Parameter(
      *         name="limit",
      *         in="query",
-     *         description="Limit number of MuG files returned",
+     *         description="Limit number of VRE files returned",
      *         required=false,
      *         type="integer"
      *     ),
@@ -32,12 +32,19 @@ class ApiController extends Controller {
      *         required=false,
      *         type="string"
      *     ),
+     *     @SWG\Parameter(
+     *         name="access_token",
+     *         in="query",
+     *         description="Access Token. If not found in header, accepted from URL query",
+     *         required=false,
+     *         type="string"
+     *     ),
      *     @SWG\Response(
      *         response=200,
      *         description="Successful operation",
      *         @SWG\Schema(
      *             type="array",
-     *             @SWG\Items(ref="#/definitions/Mugfile")
+     *             @SWG\Items(ref="#/definitions/VREfile")
      *         ),
      *     ),
      *     @SWG\Response(
@@ -69,28 +76,35 @@ class ApiController extends Controller {
             $sort_by=$filters['sort_by'];
         }
 
-        $files = $this->mugfile->getFiles($vre_id,$limit,$sort_by);
+        $files = $this->vrefile->getFiles($vre_id,$limit,$sort_by);
+
+        $response = $response->withHeader('Content-Type', 'application/json');
+        $response = $response->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization');
+        $response = $response->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+        $response = $response->withHeader('Access-Control-Allow-Origin', '*');
 
         echo json_encode($files,JSON_PRETTY_PRINT);
+
+        return $response;
         
     }
 
 
     /**
      * @SWG\Get(
-     *     path="/files/{id}",
-     *     summary="Show Mugfile",
-     *     tags={"files"},
-     *     description="Show MuG file object",
-     *     operationId="showMugfile",
+     *     path="/metadata/{id}",
+     *     summary="Show VREfile",
+     *     tags={"metadata"},
+     *     description="Show VRE file object",
+     *     operationId="showVREfile",
      *     produces={"application/json"},
      *     @SWG\Parameter(
      *         name="id",
      *         in="path",
-     *         description="Mugfile identifier",
+     *         description="VREfile identifier",
      *         required=true,
      *         type="string",
-     *         default="MuGUSER5968cc290156d_5968cc2954a382.7980548"
+     *         default="EUSHUSER5dcc2e5102c08_5dcc2e51184557.26632864"
      *     ),
      *     @SWG\Parameter(
      *         name="access_token",
@@ -103,7 +117,7 @@ class ApiController extends Controller {
      *         response=200,
      *         description="Successful operation",
      *         @SWG\Schema(
-     *             ref="#/definitions/Mugfile"
+     *             ref="#/definitions/VREfile"
      *         ),
      *     ),
      *     @SWG\Response(
@@ -130,7 +144,7 @@ class ApiController extends Controller {
 
             // Here we either check if the selected dataset ID is present in MongoDB, and if the logged user exists in the DB.
             
-            $file = $this->mugfile->getFile($id,$vre_id);
+            $file = $this->vrefile->getFile($id,$vre_id);
         
             // If the file doesn't exists...
 
@@ -143,8 +157,16 @@ class ApiController extends Controller {
             }
             
             // If the file exists, just print the metadata in JSON format. 
+
+            $response = $response->withHeader('Content-Type', 'application/json');
+            $response = $response->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization');
+            $response = $response->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+            $response = $response->withHeader('Access-Control-Allow-Origin', '*');
 	
-			echo json_encode($file,JSON_PRETTY_PRINT);
+            echo json_encode($file,JSON_PRETTY_PRINT);
+
+            return $response;
+            
 		
 		}
 		//return $response;
@@ -154,19 +176,19 @@ class ApiController extends Controller {
 
     /**
      * @SWG\Get(
-     *     path="/content/{file_path}",
+     *     path="/files/{file_path}",
      *     summary="Get file content",
-     *     tags={"content"},
-     *     description="Get file content given a the path in the repository ('file_path' in Mugfile object)",
+     *     tags={"files"},
+     *     description="Get file content given a the path in the repository ('file_path' in VREfile object)",
      *     operationId="getFileContent",
      *     produces={"application/json","text/plain", "application/octet-stream","application/x-gzip","application/x-tar","application/zip","text/html","image/png","image/tiff"},
      *     @SWG\Parameter(
      *         name="file_path",
      *         in="path",
-     *         description="Mugfile file_path",
+     *         description="VREfile file_path",
      *         required=true,
      *         type="string",
-     *         default="MuGUSER5968cc290156d\/uploads\/README.md"
+     *         default="EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md"
      *     ),
      *     @SWG\Parameter(
      *         name="access_token",
@@ -272,6 +294,10 @@ class ApiController extends Controller {
             }
         }
 
+        $response = $response->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization');
+        $response = $response->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+        $response = $response->withHeader('Access-Control-Allow-Origin', '*');
+
 		return $response;
     }
 
@@ -284,7 +310,7 @@ class ApiController extends Controller {
         if ($id){
 
 			//get file
-			$file = new Mugfile($this->container);
+			$file = new VREfile($this->container);
 			$file->getFile($id,$userLogin);
 
 			if (!$file->file_id){

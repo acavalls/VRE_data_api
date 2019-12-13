@@ -1,9 +1,9 @@
 <?php
 /**
  * @SWG\Swagger(
- *     schemes={"http"},
+ *     schemes={"https"},
  *     host="vre.eucanshare.bsc.es",
- *     basePath="/VRE_data_api/public/",
+ *     basePath="/api/v1/",
  *     consumes={"application/json"},
  *     @SWG\Info(
  *         version="1.0.0",
