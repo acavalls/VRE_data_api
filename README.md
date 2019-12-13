@@ -22,20 +22,20 @@ The list of available endpoints can be checked at: http://you.site.es/doc
 ### Installation
 
 ##### 1. Clone the repository
-##### 2. Install 3rd party modules
+##### 2. Install 3rd party modules:
 Use `composer` to install the PHP libraries required to run the application
 ```
 cd VRE_data_api
 composer update
 ```
-##### 3. Create log file
+##### 3. Create log file:
 Create and empty file that the application is going to use as log file. Make sure that the UNIX user of the web server has write permissions:
 ```
 touch logs/app.log
 chmod 777 logs/app.log
 ```
 
-##### 4. Configure web access
+##### 4. Configure web access:
 
 The web server (e.g. Apache2 or Nginx) is to be set so that the `public/` folder of the application is accessible from the internet. In the following example, the **DocumentRoot** of an Apache2 server is pointing to the installation path :
 
@@ -72,7 +72,7 @@ curl -L localhost
 Hello, this is <strong>vre</strong> resource API. <br/>Local Repository: whatever_vre<br/>
 ```
 
-##### 4.Configure application
+##### 4.Configure application:
 Configure all the particulars of the installation at `app/settings.php`. Take as template the following file:
 
 ```
