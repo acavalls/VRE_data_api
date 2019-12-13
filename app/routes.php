@@ -18,7 +18,7 @@ $app->get('/doc', function($request, $response, $args) {
     $response = $response->withHeader('Content-Type', 'application/json');
     $response = $response->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization');
     $response = $response->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    $response = $response->withHeader('Access-Control-Allow-Origin', 'https://editor.swagger.io');
+    $response = $response->withHeader('Access-Control-Allow-Origin', '*');
 
     echo $swagger;
     return $response;
