@@ -55,30 +55,7 @@ class ApiController extends Controller {
      * )
      **/
 
-    /*          OLD VERSION -> MONGODB USEREXISTS QUERY WITH USERNAME INSTEAD OF VRE_ID.
-
-	public function get_files($request, $response, $args) {
-
-        $userLogin = $request->getAttribute('userLogin');
-
-        $filters = $request->getQueryParams(); #sort,fields,page,offset,..
-
-        if($filters['limit'] && is_integer((int)$filters['limit'])) {
-            $limit=(int)$filters['limit'];
-        }
-
-        if($filters['sort_by']) {
-            $sort_by=$filters['sort_by'];
-        }
-
-        $files = $this->mugfile->getFiles($userLogin,$limit,$sort_by);
-
-        echo json_encode($files,JSON_PRETTY_PRINT);
-        
-    }
-    */
-
-    public function get_files($request, $response, $args) {
+    public function get_files_metadata($request, $response, $args) {
 
         $vre_id = $request->getAttribute('vre_id');
 
@@ -144,7 +121,7 @@ class ApiController extends Controller {
      * )
      **/
     
-	public function get_files_by_id($request, $response, $args) {
+	public function get_files_metadata_by_id($request, $response, $args) {
 
 		$id        = $args['file_id'];
         $vre_id = $request->getAttribute('vre_id');
@@ -220,7 +197,7 @@ class ApiController extends Controller {
      * )
      **/
 
-    public function get_content_by_path($request, $response, $args)
+    public function get_file_content_by_path($request, $response, $args)
     {
         $file_path = $request->getAttribute('file_path');  // path as returned by DM API (relative to user root dir)
         $vre_id    = $request->getAttribute('vre_id');     // vre_id used to verify that token owner is resource onwner
@@ -298,7 +275,8 @@ class ApiController extends Controller {
 		return $response;
     }
 
-	public function get_content_by_id($request, $response, $args) {
+    // Not added to routes yet...
+	public function get_file_content_by_id($request, $response, $args) {
 
         $id   = $args['file_id'];
         $userLogin = $request->getAttribute('userLogin');
