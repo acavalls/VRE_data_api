@@ -2,15 +2,15 @@
 /**
  * @SWG\Swagger(
  *     schemes={"http"},
- *     host="multiscalegenomics.bsc.es",
- *     basePath="/VREapi/public/v1",
+ *     host="vre.eucanshare.bsc.es",
+ *     basePath="/VRE_data_api/public/",
  *     consumes={"application/json"},
  *     @SWG\Info(
  *         version="1.0.0",
  *         title="BSC-VRE repository",
- *         description="This API manages the files stored in the local data repository of a MuG Virtual Research Enviroment (VRE). It allows to display and download these files connecting to a local storage.<br/>In this implemetation, the local repository corresponds to the BSC-VRE repository, accessible via web in http://multiscalegenomics.bsc.es",
+ *         description="This API manages the files stored in the local data repository of euCanSHare VRE. It allows to display and download these files connecting to a local storage.<br/>In this implemetation, the local repository corresponds to the BSC-VRE repository, accessible via web in https://vre.eucanshare.bsc.es",
  *         @SWG\Contact(
- *             email="multiscalegenomics@gmail.com"
+ *             email="info@eucanshare.eu"
  *         ),
  *         @SWG\License(
  *             name="Apache 2.0 (?)",
