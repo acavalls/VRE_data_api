@@ -27,7 +27,7 @@ class Oauth2 extends Model {
             return false;
     }
     public function verifyToken($token){
-        return $this->verifyToken_AuthMuG($token);
+        return $this->verifyToken_AuthVRE($token);
     }
 
 	public function verifyToken_Google($token){
@@ -62,7 +62,7 @@ class Oauth2 extends Model {
             return $result;
 	}
 
-	public function verifyToken_AuthMuG($token){
+	public function verifyToken_AuthVRE($token){
 
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $this->global['api']['tokenVerify_keycloak']);

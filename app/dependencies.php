@@ -68,9 +68,9 @@ $container['oauth2'] = function($c) {
 
 };
 
-$container['mugfile'] = function($c) {
+$container['vrefile'] = function($c) {
 
-	return new \App\Models\Mugfile($c);
+	return new \App\Models\VREfile($c);
 
 };
 

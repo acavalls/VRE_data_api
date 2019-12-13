@@ -4,17 +4,17 @@
 namespace App\Models;
 
 /**
- ** @SWG\Definition(required={"file_id","file_path","file_type","data_type","taxon_id","compressed","source_id"}, type="object", @SWG\Xml(name="Mugfile"))
+ ** @SWG\Definition(required={"file_id","file_path","file_type","data_type","taxon_id","compressed","source_id"}, type="object", @SWG\Xml(name="VREfile"))
  **/
 
 
 //use \App\Models\Utilities as Utilities;
 
 
-class Mugfile extends Model
+class VREfile extends Model
 {
         /**
-         ** MuG file identifier
+         ** VRE file identifier
          ** @SWG\Property()
          ** @var string
          **/
@@ -57,7 +57,7 @@ class Mugfile extends Model
         public $compressed;
 
         /**
-         ** MuG file identifier of the source file from which the current derives
+         ** VRE file identifier of the source file from which the current derives
          ** @SWG\Property()
          ** @var string
          **/
@@ -106,7 +106,7 @@ class Mugfile extends Model
         public function getFiles($vre_id = 0, $limit = 20, $sort_by = "_id")
         {
 
-                $mugfiles  =  array();
+                $vrefiles  =  array();
 
                 if ($vre_id) {
 
@@ -126,13 +126,13 @@ class Mugfile extends Model
                         $fileIds = $this->db->getDocuments($this->collectionF, [], ["projection" => ["_id" => true]]);
                 }
                 if (empty($fileIds) || !isset($fileIds[0]->_id)) {
-                        return $mugfiles;
+                        return $vrefiles;
                 }
                 foreach ($fileIds as $f) {
-                        $mugfile = $this->getFile($f->_id);
-                        array_push($mugfiles, $mugfile);
+                        $vrefile = $this->getFile($f->_id);
+                        array_push($vrefiles, $vrefile);
                 }
-                return $mugfiles;
+                return $vrefiles;
         
         }
 
@@ -158,7 +158,7 @@ class Mugfile extends Model
 
         public function getFile_from_VREfile($file_id, $vre_id = 0)
         {
-                $mugfile      =  new \stdClass();
+                $vrefile      =  new \stdClass();
                 if ($vre_id) {
                         if (!$this->user->userExists($vre_id)) {
                                 $code = 401;
@@ -172,49 +172,49 @@ class Mugfile extends Model
                 }
 
                 if (empty($fileData) || !isset($fileData->_id)) {
-                        return $mugfile;
+                        return $vrefile;
                 }
                 $fileMetadata = reset($this->db->getDocuments($this->collectionM, ["_id" => $file_id], []));
-                $mugfile->file_id = $fileData->_id;
+                $vrefile->file_id = $fileData->_id;
 
                 if (isset($fileData->path))
-                        $mugfile->file_path = $fileData->path;
+                        $vrefile->file_path = $fileData->path;
                 else
-                        $mugfile->file_path = NULL;
+                        $vrefile->file_path = NULL;
 
                 if (isset($fileMetadata->format))
-                        $mugfile->file_type = $fileMetadata->format;
+                        $vrefile->file_type = $fileMetadata->format;
                 else
-                        $mugfile->file_type = "UNK";
+                        $vrefile->file_type = "UNK";
 
                 if (isset($fileMetadata->trackType))
-                        $mugfile->data_type = $fileMetadata->trackType;
+                        $vrefile->data_type = $fileMetadata->trackType;
                 else
-                        $mugfile->data_type = $mugfile->format;
+                        $vrefile->data_type = $vrefile->format;
 
                 if (isset($fileData->path)) {
                         $ext = $this->utils->getExtension($fileData->path);
                         if (in_array($ext, array_keys($this->compressions))) {
-                                $mugfile->compressed = $this->compressions[$ext];
+                                $vrefile->compressed = $this->compressions[$ext];
                         } else {
-                                $mugfile->compressed = 0;
+                                $vrefile->compressed = 0;
                         }
                 }
 
                 if (isset($fileMetadata->inPaths))
-                        $mugfile->source_id = $fileMetadata->inPaths;
+                        $vrefile->source_id = $fileMetadata->inPaths;
                 else
-                        $mugfile->source_id = NULL;
+                        $vrefile->source_id = NULL;
 
                 if (isset($fileData->mtime))
-                        $mugfile->creation_time = $fileData->mtime;
+                        $vrefile->creation_time = $fileData->mtime;
                 else
-                        $mugfile->creation_time = new \MongoDate();
+                        $vrefile->creation_time = new \MongoDate();
 
                 if (isset($fileData->taxon_id))
-                        $mugfile->taxon_id = $fileData->taxon_id;
+                        $vrefile->taxon_id = $fileData->taxon_id;
                 else
-                        $mugfile->taxon_id = NULL;
+                        $vrefile->taxon_id = NULL;
 
 
                 unset($fileData->_id);
@@ -224,8 +224,8 @@ class Mugfile extends Model
                 unset($fileMetadata->format);
                 unset($fileMetadata->trackType);
                 unset($fileMetadata->inPaths);
-                $mugfile->meta_data = array_merge((array) $fileData, (array) $fileMetadata);
+                $vrefile->meta_data = array_merge((array) $fileData, (array) $fileMetadata);
 
-                return $mugfile;
+                return $vrefile;
         }
 }
