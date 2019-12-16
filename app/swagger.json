@@ -2,9 +2,9 @@
     "swagger": "2.0",
     "info": {
         "title": "BSC-VRE repository",
-        "description": "This API manages the files stored in the local data repository of a MuG Virtual Research Enviroment (VRE). It allows to display and download these files connecting to a local storage.<br/>In this implemetation, the local repository corresponds to the BSC-VRE repository, accessible via web in http://multiscalegenomics.bsc.es",
+        "description": "This API manages the files stored in the local data repository of euCanSHare VRE. It allows to display and download these files connecting to a local storage.<br/>In this implemetation, the local repository corresponds to the BSC-VRE repository, accessible via web in https://vre.eucanshare.bsc.es",
         "contact": {
-            "email": "multiscalegenomics@gmail.com"
+            "email": "info@eucanshare.eu"
         },
         "license": {
             "name": "Apache 2.0 (?)",
@@ -12,23 +12,23 @@
         },
         "version": "1.0.0"
     },
-    "host": "multiscalegenomics.bsc.es",
-    "basePath": "/VREapi/public/v1",
+    "host": "vre.eucanshare.bsc.es",
+    "basePath": "/api/v1/",
     "schemes": [
-        "http"
+        "https"
     ],
     "consumes": [
         "application/json"
     ],
     "paths": {
-        "/files": {
+        "/metadata": {
             "get": {
                 "tags": [
-                    "files"
+                    "metadata"
                 ],
                 "summary": "List user files",
-                "description": "List MuG files accessible by the user. Result can be filtered and sorted",
-                "operationId": "showUserMugfiles",
+                "description": "List VRE files accessible by the user. Result can be filtered and sorted",
+                "operationId": "showUserVREfiles",
                 "produces": [
                     "application/json"
                 ],
@@ -36,7 +36,7 @@
                     {
                         "name": "limit",
                         "in": "query",
-                        "description": "Limit number of MuG files returned",
+                        "description": "Limit number of VRE files returned",
                         "required": false,
                         "type": "integer"
                     },
@@ -44,6 +44,13 @@
                         "name": "sort_by",
                         "in": "query",
                         "description": "Sort files by attribute",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "access_token",
+                        "in": "query",
+                        "description": "Access Token. If not found in header, accepted from URL query",
                         "required": false,
                         "type": "string"
                     }
@@ -54,7 +61,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/Mugfile"
+                                "$ref": "#/definitions/VREfile"
                             }
                         }
                     },
@@ -73,14 +80,14 @@
                 ]
             }
         },
-        "/files/{id}": {
+        "/metadata/{id}": {
             "get": {
                 "tags": [
-                    "files"
+                    "metadata"
                 ],
-                "summary": "Show Mugfile",
-                "description": "Show MuG file object",
-                "operationId": "showMugfile",
+                "summary": "Show VREfile",
+                "description": "Show VRE file object",
+                "operationId": "showVREfile",
                 "produces": [
                     "application/json"
                 ],
@@ -88,10 +95,10 @@
                     {
                         "name": "id",
                         "in": "path",
-                        "description": "Mugfile identifier",
+                        "description": "VREfile identifier",
                         "required": true,
                         "type": "string",
-                        "default": "MuGUSER5968cc290156d_5968cc2954a382.7980548"
+                        "default": "EUSHUSER5dcc2e5102c08_5dcc2e51184557.26632864"
                     },
                     {
                         "name": "access_token",
@@ -105,7 +112,7 @@
                     "200": {
                         "description": "Successful operation",
                         "schema": {
-                            "$ref": "#/definitions/Mugfile"
+                            "$ref": "#/definitions/VREfile"
                         }
                     },
                     "400": {
@@ -123,13 +130,13 @@
                 ]
             }
         },
-        "/content/{file_path}": {
+        "/files/{file_path}": {
             "get": {
                 "tags": [
-                    "content"
+                    "files"
                 ],
                 "summary": "Get file content",
-                "description": "Get file content given a the path in the repository ('file_path' in Mugfile object)",
+                "description": "Get file content given a the path in the repository ('file_path' in VREfile object)",
                 "operationId": "getFileContent",
                 "produces": [
                     "application/json",
@@ -146,10 +153,10 @@
                     {
                         "name": "file_path",
                         "in": "path",
-                        "description": "Mugfile file_path",
+                        "description": "VREfile file_path",
                         "required": true,
                         "type": "string",
-                        "default": "MuGUSER5968cc290156d\\/uploads\\/README.md"
+                        "default": "EUSHUSER5dcc2e5102c08/__PROJ5de523c4e79651.15072447/uploads/README.md"
                     },
                     {
                         "name": "access_token",
@@ -203,7 +210,7 @@
                 "name": "Error"
             }
         },
-        "Mugfile": {
+        "VREfile": {
             "required": [
                 "file_id",
                 "file_path",
@@ -215,7 +222,7 @@
             ],
             "properties": {
                 "file_id": {
-                    "description": "MuG file identifier",
+                    "description": "VRE file identifier",
                     "type": "string"
                 },
                 "file_path": {
@@ -238,7 +245,7 @@
                     "type": "string"
                 },
                 "source_id": {
-                    "description": "MuG file identifier of the source file from which the current derives",
+                    "description": "VRE file identifier of the source file from which the current derives",
                     "type": "string"
                 },
                 "meta_data": {
@@ -252,23 +259,23 @@
             },
             "type": "object",
             "xml": {
-                "name": "Mugfile"
+                "name": "VREfile"
             }
         }
     },
     "securityDefinitions": {
         "bearer": {
             "type": "apiKey",
-            "description": "This API expects users to authentificate via bearer tokens. Obtain them at http://multiscalegenomics.bsc.es,</p><p>1 - login using any of the configured OAuth2 providers and your token will be displayed at 'My Profile' &rarr; 'API Keys' section.</p><p>2 - Copy&paste it here in the following format: 'bearer access_token_string'",
+            "description": "This API expects users to authentificate via bearer tokens. Obtain them at https://vre.eucanshare.bsc.es,</p><p>1 - login using any of the configured OAuth2 providers and your token will be displayed at 'My Profile' &rarr; 'API Keys' section.</p><p>2 - Copy&paste it here in the following format: 'bearer access_token_string'",
             "name": "Authorization",
             "in": "header"
         },
-        "mug_auth": {
+        "vre_auth": {
             "type": "oauth2",
-            "description": "This API expects users to authentificate via bearer tokens obtained via OAuth2. If you have an authorized OAuth2 client, you can generate them here. If not, open the OAuth2 dialog at http://multiscalegenomics.bsc.es to obtain them, as detailed in the above section<br/>",
+            "description": "This API expects users to authentificate via bearer tokens obtained via OAuth2. If you have an authorized OAuth2 client, you can generate them here. If not, open the OAuth2 dialog at http://vre.eucanshare.bsc.es to obtain them, as detailed in the above section<br/>",
             "flow": "accessCode",
-            "authorizationUrl": "https://inb.bsc.es/auth/realms/mug/protocol/openid-connect/auth",
-            "tokenUrl": "https://inb.bsc.es/auth/realms/mug/protocol/openid-connect/token",
+            "authorizationUrl": "https://inb.bsc.es/auth/realms/eucanshare/protocol/openid-connect/userinfo",
+            "tokenUrl": "https://inb.bsc.es/auth/realms/eucanshare/protocol/openid-connect/token",
             "scopes": {
                 "read": "read your files"
             }
