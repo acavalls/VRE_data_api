@@ -171,8 +171,37 @@ class ApiController extends Controller {
 		}
 		//return $response;
 
-	}
+    }
+    
+	public function get_object_metadata_by_id($request, $response, $args) {
 
+		$id        = $args['object_id'];
+
+        $response = $response->withHeader('Content-Type', 'application/json');
+        $response = $response->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization');
+        $response = $response->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+        $response = $response->withHeader('Access-Control-Allow-Origin', '*');
+	
+        echo json_encode($id,JSON_PRETTY_PRINT);
+
+        return $response;         
+        
+    }
+
+    public function get_file_from_access_id($request, $response, $args) {
+
+		$access_id        = $args['access_id'];
+
+        $response = $response->withHeader('Content-Type', 'application/json');
+        $response = $response->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization');
+        $response = $response->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+        $response = $response->withHeader('Access-Control-Allow-Origin', '*');
+	
+        echo json_encode($access_id,JSON_PRETTY_PRINT);
+
+        return $response;         
+        
+    }
 
     /**
      * @SWG\Get(

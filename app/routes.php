@@ -44,5 +44,14 @@ $app->group('/v1', function() use ($container) {
 
     })->add(new App\Middleware\JsonResponse($container));
 
+    $this->group('/objects/{object_id}', function () use ($container) {
+
+        // DRS SERVICE
+        $this->get('', 'apiController:get_object_metadata_by_id');
+
+        $this->get('/access/{access_id}', 'apiController:get_file_from_access_id');
+
+    })->add(new App\Middleware\JsonResponse($container));
+
 })->add(new App\Middleware\TokenVerify($container));
 //});
