@@ -79,3 +79,9 @@ $container['user'] = function($c) {
 	return new \App\Models\User($c);
 
 };
+
+$container['drsObject'] = function($c) {
+
+	return new \App\Models\drsObject($c);
+
+};

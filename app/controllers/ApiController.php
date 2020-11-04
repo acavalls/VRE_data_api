@@ -175,14 +175,16 @@ class ApiController extends Controller {
     
 	public function get_object_metadata_by_id($request, $response, $args) {
 
-		$id        = $args['object_id'];
+        $object_id        = $args['object_id'];
+        
+        $object = $this->drsObject->getObjectMetadata($object_id);
 
         $response = $response->withHeader('Content-Type', 'application/json');
         $response = $response->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization');
         $response = $response->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
         $response = $response->withHeader('Access-Control-Allow-Origin', '*');
 	
-        echo json_encode($id,JSON_PRETTY_PRINT);
+        echo json_encode($object,JSON_PRETTY_PRINT);
 
         return $response;         
         
@@ -190,14 +192,17 @@ class ApiController extends Controller {
 
     public function get_file_from_access_id($request, $response, $args) {
 
-		$access_id        = $args['access_id'];
+        $object_id        = $args['object_id'];
+        $access_id        = $args['access_id'];
+        
+        $access = $this->drsObject->getFileBytes($object_id, $access_id);
 
         $response = $response->withHeader('Content-Type', 'application/json');
         $response = $response->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization');
         $response = $response->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
         $response = $response->withHeader('Access-Control-Allow-Origin', '*');
 	
-        echo json_encode($access_id,JSON_PRETTY_PRINT);
+        echo json_encode($access,JSON_PRETTY_PRINT);
 
         return $response;         
         
