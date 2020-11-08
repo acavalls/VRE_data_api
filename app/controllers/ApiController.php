@@ -176,8 +176,10 @@ class ApiController extends Controller {
 	public function get_object_metadata_by_id($request, $response, $args) {
 
         $object_id        = $args['object_id'];
+
+        $vre_id = $request->getAttribute('vre_id');
         
-        $object = $this->drsObject->getObjectMetadata($object_id);
+        $object = $this->drsObject->getObjectMetadata($object_id, $vre_id);
 
         $response = $response->withHeader('Content-Type', 'application/json');
         $response = $response->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization');
@@ -194,8 +196,9 @@ class ApiController extends Controller {
 
         $object_id        = $args['object_id'];
         $access_id        = $args['access_id'];
+        $vre_id           = $request->getAttribute('vre_id');
         
-        $access = $this->drsObject->getFileBytes($object_id, $access_id);
+        $access = $this->drsObject->getURL($object_id, $access_id, $vre_id);
 
         $response = $response->withHeader('Content-Type', 'application/json');
         $response = $response->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization');
